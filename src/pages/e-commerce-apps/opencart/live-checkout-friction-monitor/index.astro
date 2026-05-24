@@ -1,0 +1,330 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+
+const plugin = {
+  name: "Live Checkout Friction Monitor",
+  slug: "live-checkout-friction-monitor",
+  version: "1.0.0",
+  testedOC: "4.1.0.3",
+  minOC: "4.0",
+  minPHP: "8.3",
+  license: "MIT",
+  marketplaceUrl: "https://www.opencart.com/index.php?route=marketplace/extension",
+  githubUrl: "https://github.com/devlinduldulao/opencart_live_checkout_friction_monitor",
+  authorUrl: "https://devlinduldulao.pro",
+  tagline: "Privacy-first telemetry for OpenCart checkout operations.",
+  description:
+    "A lightweight OpenCart extension that captures anonymous checkout friction signals, stores them only in short-lived local files, and renders a live owner dashboard without Redis, Node.js, or custom extension tables.",
+};
+
+const features = [
+  {
+    icon: "📊",
+    title: "Live Checkout Metrics",
+    desc: "Track active friction signals, recent events, and checkout patterns in real time from the module dashboard.",
+  },
+  {
+    icon: "🧼",
+    title: "Sanitized Event Intake",
+    desc: "Incoming frontend events are allow-listed, normalized, and stripped of sensitive customer input before they ever touch disk.",
+  },
+  {
+    icon: "⏱️",
+    title: "Short-Lived Local Storage",
+    desc: "Events expire automatically based on the configured retention window, keeping the dataset small and operationally cheap.",
+  },
+  {
+    icon: "🚦",
+    title: "Filesystem Rate Limiting",
+    desc: "Per-session request limiting blocks burst abuse without requiring Redis or another external rate-limiting service.",
+  },
+  {
+    icon: "🧪",
+    title: "Preview Mode",
+    desc: "Simulate realistic checkout activity directly in the owner dashboard without writing synthetic events into live storage.",
+  },
+  {
+    icon: "🧩",
+    title: "OpenCart Native UI",
+    desc: "Built into the module settings experience and styled to fit the Bootstrap-based OpenCart admin rather than introducing a foreign app shell.",
+  },
+];
+
+const steps = [
+  {
+    step: "01",
+    title: "Checkout route is detected",
+    desc: "An OpenCart footer event checks whether the current storefront request looks like a checkout route before any tracking script is injected.",
+  },
+  {
+    step: "02",
+    title: "Frontend tracker sends an event",
+    desc: "The checkout script posts a short anonymous JSON payload to the tracking endpoint with a session-scoped token and a signal type.",
+  },
+  {
+    step: "03",
+    title: "Request is validated and sanitized",
+    desc: "The catalog controller verifies method and token while the sanitizer removes anything outside the safe payload schema.",
+  },
+  {
+    step: "04",
+    title: "Event is stored locally",
+    desc: "Valid events are written to JSON files under OpenCart storage and rate-limit state is kept alongside them in the same local runtime area.",
+  },
+  {
+    step: "05",
+    title: "Dashboard feed refreshes",
+    desc: "The admin module page polls the feed endpoint and updates metrics, recent events, and preview scenarios without a page reload.",
+  },
+];
+
+const privacyPoints = [
+  "No customer form values are stored.",
+  "No payment data is stored.",
+  "No Redis, Node.js backend, or external queue is required.",
+  "No custom monitoring database tables are created.",
+  "Event payloads are anonymous, short-lived, and allow-listed.",
+  "Synthetic preview events never contaminate live monitoring storage.",
+];
+---
+
+<Layout title={`${plugin.name} — Real-Time Checkout Telemetry for OpenCart`}>
+  <Header />
+  <main id="main-content">
+    <section class="border-skin-line border-b">
+      <div class="mx-auto max-w-4xl px-4 py-16">
+        <div class="mb-4 flex flex-wrap items-center gap-2">
+          <span class="bg-skin-accent text-skin-inverted rounded px-2 py-0.5 text-xs font-semibold">
+            v{plugin.version}
+          </span>
+          <span class="border-skin-line rounded border px-2 py-0.5 text-xs opacity-70">
+            OpenCart {plugin.minOC}+
+          </span>
+          <span class="border-skin-line rounded border px-2 py-0.5 text-xs opacity-70">
+            Tested on {plugin.testedOC}
+          </span>
+          <span class="border-skin-line rounded border px-2 py-0.5 text-xs opacity-70">
+            PHP {plugin.minPHP}+
+          </span>
+          <span class="border-skin-line rounded border px-2 py-0.5 text-xs opacity-70">
+            {plugin.license}
+          </span>
+        </div>
+
+        <h1 class="mb-4 text-4xl font-bold leading-tight">
+          {plugin.name}
+        </h1>
+        <p class="text-skin-base mb-3 text-xl font-medium opacity-90">
+          {plugin.tagline}
+        </p>
+        <p class="text-skin-base mb-8 max-w-2xl text-base leading-relaxed opacity-70">
+          {plugin.description}
+        </p>
+
+        <div class="flex flex-wrap gap-3">
+          <a
+            href={plugin.marketplaceUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-skin-accent text-skin-inverted inline-flex items-center gap-2 rounded-md px-5 py-2.5 text-sm font-semibold transition hover:brightness-110"
+          >
+            View on OpenCart Marketplace
+          </a>
+          <a
+            href={plugin.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="border-skin-line bg-skin-card inline-flex items-center gap-2 rounded-md border px-5 py-2.5 text-sm font-semibold transition hover:shadow-md"
+          >
+            View on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-4xl px-4 py-14">
+      <h2 class="mb-2 text-2xl font-bold">Features</h2>
+      <p class="text-skin-base mb-8 opacity-60">Operational telemetry without adding infrastructure sprawl.</p>
+      <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {features.map((feature) => (
+          <div class="border-skin-line bg-skin-card rounded-lg border p-5 shadow-sm transition hover:shadow-md">
+            <div class="mb-3 text-3xl">{feature.icon}</div>
+            <h3 class="mb-1.5 text-base font-semibold">{feature.title}</h3>
+            <p class="text-sm leading-relaxed opacity-65">{feature.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="border-skin-line border-t">
+      <div class="mx-auto max-w-4xl px-4 py-14">
+        <h2 class="mb-2 text-2xl font-bold">How it works</h2>
+        <p class="text-skin-base mb-10 opacity-60">From checkout interaction to live dashboard signal in five steps.</p>
+        <ol class="space-y-0">
+          {steps.map((item, index) => (
+            <li class="flex gap-6">
+              <div class="flex flex-col items-center">
+                <div class="bg-skin-accent text-skin-inverted flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold">
+                  {item.step}
+                </div>
+                {index < steps.length - 1 && (
+                  <div class="border-skin-line my-1 w-px grow border-l border-dashed" />
+                )}
+              </div>
+              <div class="pb-8">
+                <h3 class="mb-1 font-semibold">{item.title}</h3>
+                <p class="text-sm leading-relaxed opacity-65">{item.desc}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+
+    <section class="border-skin-line border-t">
+      <div class="mx-auto max-w-4xl px-4 py-14">
+        <div class="border-skin-line bg-skin-card rounded-xl border p-8 shadow-sm">
+          <div class="mb-1 text-3xl">🛡️</div>
+          <h2 class="mb-2 text-2xl font-bold">Privacy by design</h2>
+          <p class="text-skin-base mb-6 opacity-60">
+            Designed for store owners who need actionable checkout visibility without collecting customer-sensitive data.
+          </p>
+          <ul class="space-y-3">
+            {privacyPoints.map((point) => (
+              <li class="flex items-start gap-3 text-sm leading-relaxed">
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-skin-accent mt-0.5 h-4 w-4 shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="opacity-75">{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-skin-line border-t">
+      <div class="mx-auto max-w-4xl px-4 py-14">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+          <div>
+            <h2 class="mb-4 text-xl font-bold">Requirements</h2>
+            <table class="w-full text-sm">
+              <tbody class="divide-skin-line divide-y">
+                {[
+                  ["OpenCart", `${plugin.minOC} or higher`],
+                  ["Tested version", plugin.testedOC],
+                  ["PHP", `${plugin.minPHP} or higher`],
+                  ["Storage model", "Local filesystem under DIR_STORAGE"],
+                  ["Admin UI", "Bootstrap-based OpenCart module page"],
+                  ["External services", "None required"],
+                ].map(([label, value]) => (
+                  <tr>
+                    <td class="py-2.5 pr-4 font-medium opacity-70">{label}</td>
+                    <td class="py-2.5 opacity-90">{value}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div>
+            <h2 class="mb-4 text-xl font-bold">Installation</h2>
+            <ol class="space-y-3 text-sm">
+              {[
+                "Download the OpenCart installer zip for the extension.",
+                "In OpenCart admin, go to Extensions → Installer and upload the package.",
+                "Open Extensions → Extensions → Modules.",
+                "Install Live Checkout Friction Monitor.",
+                "Open the module settings page and enable monitoring.",
+                "Set retention and dashboard polling to match your store operations workflow.",
+              ].map((step, index) => (
+                <li class="flex gap-3">
+                  <span class="border-skin-line text-skin-accent shrink-0 rounded border px-1.5 py-0.5 text-xs font-bold tabular-nums">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span class="leading-snug opacity-75">{step}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-skin-line border-t">
+      <div class="mx-auto max-w-4xl px-4 py-14">
+        <h2 class="mb-8 text-2xl font-bold">Frequently asked questions</h2>
+        <div class="space-y-6">
+          {[
+            {
+              q: "Does this add a shopper-facing widget to checkout?",
+              a: "No. The extension is owner-facing only. It injects the tracker in the background and keeps the customer-facing checkout visually untouched.",
+            },
+            {
+              q: "Does it require Redis or a separate real-time backend?",
+              a: "No. Storage, rate limiting, and feed generation are all handled locally using OpenCart storage paths and standard PHP runtime behavior.",
+            },
+            {
+              q: "What data is actually stored?",
+              a: "Only short anonymous friction events that survive the sanitizer. No payment data, no customer form values, and no custom monitoring tables are created.",
+            },
+            {
+              q: "Can I preview the dashboard before real traffic arrives?",
+              a: "Yes. Preview mode simulates realistic checkout activity in the owner dashboard without writing fake events into the live storage area.",
+            },
+            {
+              q: "Will this fit the existing OpenCart admin interface?",
+              a: "Yes. The module is intentionally styled to align with the native OpenCart admin experience and Bootstrap-based component language instead of looking like an external SaaS embed.",
+            },
+          ].map((item) => (
+            <details class="border-skin-line bg-skin-card group rounded-lg border shadow-sm">
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-sm font-semibold select-none">
+                <span>{item.q}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0 opacity-50 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </summary>
+              <p class="border-skin-line border-t px-5 py-4 text-sm leading-relaxed opacity-70">
+                {item.a}
+              </p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="border-skin-line border-t">
+      <div class="mx-auto max-w-4xl px-4 py-14 text-center">
+        <h2 class="mb-3 text-2xl font-bold">Need cleaner checkout visibility?</h2>
+        <p class="text-skin-base mb-8 opacity-60">
+          This extension gives operators a live view of friction without adding infrastructure or bloating the storefront.
+        </p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <a
+            href={plugin.marketplaceUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-skin-accent text-skin-inverted inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold transition hover:brightness-110"
+          >
+            View Marketplace Listing
+          </a>
+          <a
+            href="/e-commerce-apps/opencart/"
+            class="border-skin-line bg-skin-card inline-flex items-center gap-2 rounded-md border px-6 py-3 text-sm font-semibold transition hover:shadow-md"
+          >
+            ← Back to extension gallery
+          </a>
+        </div>
+        <p class="mt-6 text-xs opacity-40">
+          {plugin.license} &nbsp;·&nbsp; Developed by
+          <a href={plugin.authorUrl} class="underline decoration-dashed underline-offset-2 hover:opacity-70" target="_blank" rel="noopener noreferrer">
+            Devlin Duldulao
+          </a>
+        </p>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

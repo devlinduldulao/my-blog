@@ -1,0 +1,82 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+
+const developerName = "Devlin Duldulao"; // Assuming from your username or modify as needed
+const developerEmail = "devlinduldulao@gmail.com";
+---
+
+<Layout title={`Developer Plugins & Apps Gallery for WooCommerce`}>
+  <Header />
+  <main id="main-content">
+    <section id="hero" class="mx-auto max-w-4xl px-4 py-8">
+      <div class="mb-12 text-center">
+        <h1 class="mb-4 text-3xl font-bold">
+          WooCommerce Apps & Plugins Gallery
+        </h1>
+        <p class="text-skin-base mb-4">
+          A showcase of future plugins and applications built to enhance your
+          e-commerce experience.
+        </p>
+
+        <div
+          class="bg-skin-card border-skin-line inline-block rounded-lg border p-6 text-left shadow-sm"
+        >
+          <h2
+            class="border-skin-line mb-3 border-b-2 pb-2 text-xl font-semibold"
+          >
+            Developer Information
+          </h2>
+          <ul class="space-y-2">
+            <li><strong>Developer:</strong> {developerName}</li>
+            <li>
+              <strong>Email:</strong>
+              <a
+                href={`mailto:${developerEmail}`}
+                class="text-skin-accent hover:text-skin-accent underline decoration-dashed underline-offset-4"
+                >{developerEmail}</a>
+            </li>
+            <li>
+              <strong>Marketplace:</strong>
+              <a
+                href="https://woocommerce.com/extensions/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-skin-accent hover:text-skin-accent underline decoration-dashed underline-offset-4"
+                >WooCommerce Store</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <a
+          href="/e-commerce-apps/woocommerce/devlin-geo-pulse/"
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-skin-accent focus-visible:ring-offset-2"
+        >
+          <div class="bg-skin-fill flex h-48 w-full items-center justify-center text-5xl">
+            🌍
+          </div>
+          <div class="flex grow flex-col p-4">
+            <div class="mb-2 flex flex-wrap items-center gap-1.5">
+              <span class="bg-skin-accent text-skin-inverted rounded px-1.5 py-0.5 text-xs font-semibold">v1.0.3</span>
+              <span class="border-skin-line rounded border px-1.5 py-0.5 text-xs opacity-60">Free</span>
+              <span class="border-skin-line rounded border px-1.5 py-0.5 text-xs opacity-60">GPL-2.0</span>
+            </div>
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              Devlin Geo Pulse
+            </h3>
+            <p class="mb-4 grow text-sm opacity-80">
+              See who's shopping — live, private, and lightweight. Real-time visitor geo tracking for WooCommerce with zero IP storage.
+            </p>
+            <span
+              class="bg-skin-accent text-skin-inverted mt-auto block w-full rounded px-4 py-2 text-center text-sm font-medium transition hover:brightness-110"
+            >View Plugin</span>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

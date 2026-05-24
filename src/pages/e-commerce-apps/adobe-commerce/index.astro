@@ -1,0 +1,778 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+
+const developerName = "Devlin Duldulao"; // Assuming from your username or modify as needed
+const developerEmail = "devlinduldulao@gmail.com";
+---
+
+<Layout title={`Developer Plugins & Apps Gallery for Adobe Commerce (Magento)`}>
+  <Header />
+  <main id="main-content">
+    <section id="hero" class="mx-auto max-w-4xl px-4 py-8">
+      <div class="mb-12 text-center">
+        <h1 class="mb-4 text-3xl font-bold">
+          Adobe Commerce (Magento) Apps & Plugins Gallery
+        </h1>
+        <p class="text-skin-base mb-4">
+          A showcase of future plugins and applications built to enhance your
+          e-commerce experience.
+        </p>
+
+        <div
+          class="bg-skin-card border-skin-line inline-block rounded-lg border p-6 text-left shadow-sm"
+        >
+          <h2
+            class="border-skin-line mb-3 border-b-2 pb-2 text-xl font-semibold"
+          >
+            Developer Information
+          </h2>
+          <ul class="space-y-2">
+            <li><strong>Developer:</strong> {developerName}</li>
+            <li>
+              <strong>Email:</strong>
+              <a
+                href={`mailto:${developerEmail}`}
+                class="text-skin-accent hover:text-skin-accent underline decoration-dashed underline-offset-4"
+                >{developerEmail}</a>
+            </li>
+            <li>
+              <strong>Marketplace:</strong>
+              <a
+                href="https://marketplace.magento.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-skin-accent hover:text-skin-accent underline decoration-dashed underline-offset-4"
+                >Adobe Commerce (Magento) Store</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("AI upsell recommendation engine")}`}
+            alt="AI upsell recommendation engine placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              AI upsell recommendation engine
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust ai
+              upsell recommendation engine to boost sales and streamline your
+              e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("Smart product bundles")}`}
+            alt="Smart product bundles placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              Smart product bundles
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust
+              smart product bundles to boost sales and streamline your
+              e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("Dynamic pricing based on demand")}`}
+            alt="Dynamic pricing based on demand placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              Dynamic pricing based on demand
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust
+              dynamic pricing based on demand to boost sales and streamline your
+              e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("Checkout conversion optimizer")}`}
+            alt="Checkout conversion optimizer placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              Checkout conversion optimizer
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust
+              checkout conversion optimizer to boost sales and streamline your
+              e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("Personalized landing pages")}`}
+            alt="Personalized landing pages placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              Personalized landing pages
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust
+              personalized landing pages to boost sales and streamline your
+              e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("AI email campaign generator")}`}
+            alt="AI email campaign generator placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              AI email campaign generator
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust ai
+              email campaign generator to boost sales and streamline your
+              e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("Automatic discount strategy optimizer")}`}
+            alt="Automatic discount strategy optimizer placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              Automatic discount strategy optimizer
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust
+              automatic discount strategy optimizer to boost sales and
+              streamline your e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("Influencer referral tracking")}`}
+            alt="Influencer referral tracking placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              Influencer referral tracking
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust
+              influencer referral tracking to boost sales and streamline your
+              e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("SMS campaign automation")}`}
+            alt="SMS campaign automation placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              SMS campaign automation
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust
+              sms campaign automation to boost sales and streamline your
+              e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("Affiliate program manager")}`}
+            alt="Affiliate program manager placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              Affiliate program manager
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust
+              affiliate program manager to boost sales and streamline your
+              e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("Real profit dashboard")}`}
+            alt="Real profit dashboard placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              Real profit dashboard
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust
+              real profit dashboard to boost sales and streamline your
+              e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("Ad spend vs revenue analyzer")}`}
+            alt="Ad spend vs revenue analyzer placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              Ad spend vs revenue analyzer
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust ad
+              spend vs revenue analyzer to boost sales and streamline your
+              e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("Customer lifetime value tracker")}`}
+            alt="Customer lifetime value tracker placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              Customer lifetime value tracker
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust
+              customer lifetime value tracker to boost sales and streamline your
+              e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("Conversion funnel visualizer")}`}
+            alt="Conversion funnel visualizer placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              Conversion funnel visualizer
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust
+              conversion funnel visualizer to boost sales and streamline your
+              e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("Marketing attribution dashboard")}`}
+            alt="Marketing attribution dashboard placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              Marketing attribution dashboard
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust
+              marketing attribution dashboard to boost sales and streamline your
+              e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("Order export to accounting systems")}`}
+            alt="Order export to accounting systems placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              Order export to accounting systems
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust
+              order export to accounting systems to boost sales and streamline
+              your e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("Inventory sync across marketplaces")}`}
+            alt="Inventory sync across marketplaces placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              Inventory sync across marketplaces
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust
+              inventory sync across marketplaces to boost sales and streamline
+              your e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("Supplier stock sync")}`}
+            alt="Supplier stock sync placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              Supplier stock sync
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust
+              supplier stock sync to boost sales and streamline your e-commerce
+              operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("Automated product imports")}`}
+            alt="Automated product imports placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              Automated product imports
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust
+              automated product imports to boost sales and streamline your
+              e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("Refund monitoring system")}`}
+            alt="Refund monitoring system placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              Refund monitoring system
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust
+              refund monitoring system to boost sales and streamline your
+              e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("Product description generator")}`}
+            alt="Product description generator placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              Product description generator
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust
+              product description generator to boost sales and streamline your
+              e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("Product image enhancer")}`}
+            alt="Product image enhancer placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              Product image enhancer
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust
+              product image enhancer to boost sales and streamline your
+              e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("AI product tag generator")}`}
+            alt="AI product tag generator placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              AI product tag generator
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust ai
+              product tag generator to boost sales and streamline your
+              e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("AI SEO optimization tool")}`}
+            alt="AI SEO optimization tool placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              AI SEO optimization tool
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust ai
+              seo optimization tool to boost sales and streamline your
+              e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("AI support assistant")}`}
+            alt="AI support assistant placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              AI support assistant
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust ai
+              support assistant to boost sales and streamline your e-commerce
+              operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("Wholesale portal builder")}`}
+            alt="Wholesale portal builder placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              Wholesale portal builder
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust
+              wholesale portal builder to boost sales and streamline your
+              e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("Bulk order form generator")}`}
+            alt="Bulk order form generator placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              Bulk order form generator
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust
+              bulk order form generator to boost sales and streamline your
+              e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("Customer‑specific pricing engine")}`}
+            alt="Customer‑specific pricing engine placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              Customer‑specific pricing engine
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust
+              customer‑specific pricing engine to boost sales and streamline
+              your e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("Distributor order management")}`}
+            alt="Distributor order management placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              Distributor order management
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust
+              distributor order management to boost sales and streamline your
+              e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+        <div
+          class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md"
+        >
+          <img
+            class="bg-skin-fill h-48 w-full object-cover"
+            src={`https://via.placeholder.com/600x400?text=${encodeURIComponent("Purchase order automation")}`}
+            alt="Purchase order automation placeholder image"
+            loading="lazy"
+          />
+          <div class="flex flex-grow flex-col p-4">
+            <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+              Purchase order automation
+            </h3>
+            <p class="mb-4 flex-grow text-sm opacity-80">
+              A powerful Adobe Commerce (Magento) extension offering a robust
+              purchase order automation to boost sales and streamline your
+              e-commerce operations seamlessly.
+            </p>
+            <button
+              class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+              disabled>Coming Soon</button
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

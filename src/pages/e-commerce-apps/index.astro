@@ -1,0 +1,97 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import { SITE } from "@/config";
+
+const platforms = [
+  {
+    id: "adobe-commerce",
+    name: "Adobe Commerce (Magento)",
+    description: "Explore plugins and apps for Magento/Adobe Commerce.",
+  },
+  {
+    id: "bigcommerce",
+    name: "BigCommerce",
+    description: "Explore plugins and apps for BigCommerce.",
+  },
+  {
+    id: "ecwid",
+    name: "Ecwid",
+    description: "Explore plugins and apps for Ecwid.",
+  },
+  {
+    id: "opencart",
+    name: "OpenCart",
+    description: "Explore plugins and apps for OpenCart.",
+  },
+  {
+    id: "prestashop",
+    name: "PrestaShop",
+    description: "Explore plugins and apps for PrestaShop.",
+  },
+  {
+    id: "shopify",
+    name: "Shopify",
+    description: "Explore plugins and apps for Shopify.",
+  },
+  {
+    id: "wix",
+    name: "Wix",
+    description: "Explore plugins and apps for Wix.",
+  },
+  {
+    id: "woocommerce",
+    name: "WooCommerce",
+    description: "Explore plugins and apps for WooCommerce.",
+  },
+];
+---
+
+<Layout title={`E-commerce Apps Gallery | ${SITE.title}`}>
+  <Header />
+  <main id="main-content">
+    <section id="hero" class="mx-auto max-w-4xl px-4 py-8">
+      <div class="mb-12 text-center">
+        <h1 class="mb-4 text-3xl font-bold">E-commerce Apps Galleries</h1>
+        <p class="text-skin-base mb-4">
+          Select your platform to view the upcoming plugins and applications.
+        </p>
+      </div>
+
+      <div class="relative grid grid-cols-1 gap-6 md:grid-cols-2">
+        {
+          platforms.map(platform => (
+            <a
+              href={`/e-commerce-apps/${platform.id}`}
+              class="border-skin-line bg-skin-card group hover:border-skin-accent block flex flex-col overflow-hidden rounded-lg border p-6 shadow-sm transition hover:shadow-md"
+            >
+              <h2 class="group-hover:text-skin-accent mb-2 text-2xl font-semibold transition-colors">
+                {platform.name}
+              </h2>
+              <p class="text-skin-base mb-4">{platform.description}</p>
+              <div class="text-skin-accent mt-auto flex items-center text-sm font-medium italic">
+                <span>View Gallery</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="ml-1 h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

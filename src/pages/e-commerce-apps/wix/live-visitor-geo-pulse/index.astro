@@ -1,0 +1,431 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+
+const appName = "Live Visitor Geo Pulse";
+const platformName = "Wix";
+const developerName = "Devlin Duldulao";
+const developerEmail = "devlinduldulao@gmail.com";
+
+const dashboardMetrics = [
+  {
+    label: "Active Visitors",
+    desc: "How many people are browsing your store right now",
+    icon: "👥",
+  },
+  {
+    label: "Countries Active",
+    desc: "Number of countries your current visitors are from",
+    icon: "🌍",
+  },
+  {
+    label: "Top Country",
+    desc: "The country sending you the most traffic at this moment",
+    icon: "📍",
+  },
+  {
+    label: "New Visitors / Min",
+    desc: "How many new visitors arrived in the last 60 seconds",
+    icon: "⚡",
+  },
+];
+
+const features = [
+  {
+    title: "Real-Time Visitor Count",
+    desc: "See exactly how many shoppers are on your store at any given moment — no waiting for analytics reports.",
+    icon: "📡",
+  },
+  {
+    title: "Visitor Breakdown by Country",
+    desc: "Know which countries your traffic is coming from so you can tailor promotions and shipping options.",
+    icon: "🌍",
+  },
+  {
+    title: "Device & Page Insights",
+    desc: "See whether visitors are on mobile or desktop, and which pages they are browsing.",
+    icon: "📱",
+  },
+  {
+    title: "100% Anonymous",
+    desc: "No personal data or IP addresses are stored. Fully privacy-respecting — for you and your customers.",
+    icon: "🔒",
+  },
+  {
+    title: "No Extra Tools Needed",
+    desc: "No separate database, Redis, or analytics warehouse. Everything runs within the app itself.",
+    icon: "💡",
+  },
+  {
+    title: "Preview Traffic Mode",
+    desc: "Test how the dashboard looks with simulated visitors before going live — perfect for demos and screenshots.",
+    icon: "🎬",
+  },
+  {
+    title: "Easy Setup via Custom Code",
+    desc: "Just paste one script tag into Wix Custom Code. No coding experience required.",
+    icon: "⚡",
+  },
+  {
+    title: "Feels Native to Wix",
+    desc: "Built with the Wix Design System so it looks and feels like part of your Wix dashboard.",
+    icon: "🎨",
+  },
+];
+
+const faq = [
+  {
+    q: "Does this app collect personal data from my customers?",
+    a: "No. Live Visitor Geo Pulse is designed to be privacy-first. It does not store IP addresses, cookies with personal identifiers, or any persistent visitor history. All presence data is anonymous and short-lived.",
+  },
+  {
+    q: "Do I need to install any other software or databases?",
+    a: "No. The app runs entirely on its own — no separate database, Redis cache, or analytics tools are required. It uses lightweight, short-lived storage that works out of the box.",
+  },
+  {
+    q: "How do I add the tracker to my Wix storefront?",
+    a: "After installing the app, go to the Setup page inside the app. It generates a single script tag for you. Paste that into your Wix site via Dashboard → Settings → Custom Code. That's it.",
+  },
+  {
+    q: "Will this slow down my storefront?",
+    a: "No. The tracker script is tiny and loads asynchronously. It sends a small anonymous heartbeat in the background and has no impact on page load speed or visitor experience.",
+  },
+  {
+    q: "Can I see historical visitor data?",
+    a: "This app is designed for live, real-time presence — it shows who's on your site right now. It does not store historical data. For historical analytics, use Wix Analytics or Google Analytics.",
+  },
+  {
+    q: "What Wix plans is this compatible with?",
+    a: "Live Visitor Geo Pulse works with any Wix plan that supports Custom Code (typically Business plans and above).",
+  },
+  {
+    q: "Is there a cost to use this app?",
+    a: "The app is currently pending approval on the Wix App Market. Pricing details will be available once it is published.",
+  },
+];
+---
+
+<Layout title={`${appName} for ${platformName} — See Who's On Your Store Right Now`}>
+  <Header />
+  <main id="main-content">
+    <article class="mx-auto max-w-5xl px-4 py-8">
+      <!-- Breadcrumb -->
+      <nav class="mb-6 text-sm opacity-70">
+        <a
+          href="/e-commerce-apps"
+          class="text-skin-accent hover:underline underline-offset-4"
+          >E-commerce Apps</a
+        >
+        <span class="mx-2">/</span>
+        <a
+          href="/e-commerce-apps/wix"
+          class="text-skin-accent hover:underline underline-offset-4">Wix</a
+        >
+        <span class="mx-2">/</span>
+        <span>{appName}</span>
+      </nav>
+
+      <!-- Hero Section -->
+      <header class="mb-12">
+        <div
+          class="border-skin-line bg-skin-card overflow-hidden rounded-2xl border shadow-sm"
+        >
+          <div class="p-8 md:p-12">
+            <div class="flex flex-col gap-6 md:flex-row md:items-start">
+              <div
+                class="border-skin-accent/30 bg-skin-accent/10 flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl border-2 text-4xl"
+              >
+                📡
+              </div>
+              <div class="flex-1">
+                <div class="mb-3 flex flex-wrap items-center gap-3">
+                  <h1 class="text-3xl font-bold md:text-4xl">{appName}</h1>
+                  <span
+                    class="rounded-full border border-amber-400/60 bg-amber-50 px-3 py-0.5 text-xs font-semibold text-amber-700 dark:border-amber-500/40 dark:bg-amber-900/30 dark:text-amber-300"
+                    >Pending Approval</span
+                  >
+                </div>
+                <p
+                  class="text-skin-base mb-5 max-w-2xl text-lg leading-relaxed"
+                >
+                  Know exactly <strong>who's browsing your Wix store</strong> right
+                  now — by country, device, and page — without compromising your
+                  customers' privacy.
+                </p>
+                <p class="max-w-2xl text-sm opacity-70">
+                  A lightweight admin app for Wix store owners who want instant
+                  visibility into live storefront activity. No separate
+                  analytics tools, no complicated setup, no personal data
+                  collected.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- What You'll See -->
+      <section class="mb-12">
+        <h2 class="border-skin-line mb-6 border-b-2 pb-3 text-2xl font-bold">
+          What You'll See on Your Dashboard
+        </h2>
+        <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {
+            dashboardMetrics.map(metric => (
+              <div class="border-skin-line bg-skin-card rounded-xl border p-5 text-center shadow-sm">
+                <div class="mb-2 text-3xl">{metric.icon}</div>
+                <h3 class="text-skin-accent mb-1 text-sm font-bold uppercase tracking-wide">
+                  {metric.label}
+                </h3>
+                <p class="text-xs opacity-70">{metric.desc}</p>
+              </div>
+            ))
+          }
+        </div>
+        <p class="mt-4 text-center text-sm opacity-60">
+          Plus breakdowns by country, device type (mobile vs. desktop), and
+          which store pages visitors are on.
+        </p>
+      </section>
+
+      <!-- How It Works (merchant perspective) -->
+      <section class="mb-12">
+        <h2 class="border-skin-line mb-6 border-b-2 pb-3 text-2xl font-bold">
+          How It Works
+        </h2>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div
+            class="border-skin-line bg-skin-card rounded-xl border p-6 shadow-sm"
+          >
+            <div
+              class="bg-skin-accent text-skin-inverted mb-4 inline-flex h-9 w-9 items-center justify-center rounded-full text-sm font-bold"
+            >
+              1
+            </div>
+            <h3 class="mb-2 text-lg font-semibold">Install the App</h3>
+            <p class="text-sm opacity-80">
+              Add Live Visitor Geo Pulse from the Wix App Market. The app
+              installs directly into your Wix dashboard — no coding needed.
+            </p>
+          </div>
+          <div
+            class="border-skin-line bg-skin-card rounded-xl border p-6 shadow-sm"
+          >
+            <div
+              class="bg-skin-accent text-skin-inverted mb-4 inline-flex h-9 w-9 items-center justify-center rounded-full text-sm font-bold"
+            >
+              2
+            </div>
+            <h3 class="mb-2 text-lg font-semibold">Add One Script Tag</h3>
+            <p class="text-sm opacity-80">
+              The Setup page generates a single script tag. Copy it and paste
+              it into your Wix site under <strong
+                >Settings &rarr; Custom Code</strong
+              >. That's the only manual step.
+            </p>
+          </div>
+          <div
+            class="border-skin-line bg-skin-card rounded-xl border p-6 shadow-sm"
+          >
+            <div
+              class="bg-skin-accent text-skin-inverted mb-4 inline-flex h-9 w-9 items-center justify-center rounded-full text-sm font-bold"
+            >
+              3
+            </div>
+            <h3 class="mb-2 text-lg font-semibold">Watch Your Dashboard</h3>
+            <p class="text-sm opacity-80">
+              Open the Live Pulse page in the app. You'll see your active
+              visitors, their countries, devices, and current pages — all
+              updating in real time.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="mb-12">
+        <h2 class="border-skin-line mb-6 border-b-2 pb-3 text-2xl font-bold">
+          Features
+        </h2>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          {
+            features.map(feature => (
+              <div class="border-skin-line bg-skin-card flex items-start gap-4 rounded-lg border p-4 shadow-sm transition hover:shadow-md">
+                <span class="mt-0.5 text-2xl">{feature.icon}</span>
+                <div>
+                  <h3 class="font-semibold">{feature.title}</h3>
+                  <p class="text-sm opacity-80">{feature.desc}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+      <!-- Privacy & Security -->
+      <section class="mb-12">
+        <h2 class="border-skin-line mb-6 border-b-2 pb-3 text-2xl font-bold">
+          Privacy & Security
+        </h2>
+        <div
+          class="border-skin-line bg-skin-card rounded-xl border p-6 shadow-sm md:p-8"
+        >
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div>
+              <h3 class="mb-3 font-semibold">What the app does NOT do</h3>
+              <ul class="space-y-2 text-sm opacity-80">
+                <li class="flex items-start gap-2">
+                  <span class="text-red-500">✕</span>
+                  <span>Store IP addresses or personal identifiers</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-red-500">✕</span>
+                  <span>Track individual visitors across sessions</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-red-500">✕</span>
+                  <span>Keep any historical visitor logs</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-red-500">✕</span>
+                  <span>Share data with third parties</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="mb-3 font-semibold">What the app DOES do</h3>
+              <ul class="space-y-2 text-sm opacity-80">
+                <li class="flex items-start gap-2">
+                  <span class="text-green-500">✓</span>
+                  <span>Show live, anonymous visitor counts</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-green-500">✓</span>
+                  <span>Group visitors by country, device, and page</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-green-500">✓</span>
+                  <span>Automatically discard presence data after it expires</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-green-500">✓</span>
+                  <span>Use secure OAuth 2.0 for Wix authentication</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="mb-12">
+        <h2 class="border-skin-line mb-6 border-b-2 pb-3 text-2xl font-bold">
+          Frequently Asked Questions
+        </h2>
+        <div class="space-y-4">
+          {
+            faq.map(item => (
+              <details class="border-skin-line bg-skin-card group rounded-xl border shadow-sm">
+                <summary class="cursor-pointer select-none px-6 py-4 text-sm font-semibold transition-colors hover:opacity-80">
+                  {item.q}
+                </summary>
+                <div class="border-skin-line border-t px-6 py-4 text-sm opacity-80">
+                  {item.a}
+                </div>
+              </details>
+            ))
+          }
+        </div>
+      </section>
+
+      <!-- App Status -->
+      <section class="mb-12">
+        <h2 class="border-skin-line mb-6 border-b-2 pb-3 text-2xl font-bold">
+          Availability
+        </h2>
+        <div
+          class="border-skin-line bg-skin-card rounded-xl border p-6 shadow-sm"
+        >
+          <div class="flex items-start gap-4">
+            <div
+              class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-amber-400/60 bg-amber-50 text-lg dark:border-amber-500/40 dark:bg-amber-900/30"
+            >
+              ⏳
+            </div>
+            <div>
+              <h3 class="mb-1 font-semibold">
+                Pending Wix App Market Approval
+              </h3>
+              <p class="text-sm opacity-80">
+                This app has been submitted to the Wix App Market and is
+                currently under review. Once approved, it will be available for
+                installation directly from the
+                <a
+                  href="https://www.wix.com/app-market"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-skin-accent hover:underline underline-offset-4"
+                  >Wix App Market</a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Developer / Support -->
+      <section class="mb-12">
+        <h2 class="border-skin-line mb-6 border-b-2 pb-3 text-2xl font-bold">
+          Developer & Support
+        </h2>
+        <div
+          class="border-skin-line bg-skin-card rounded-xl border p-6 shadow-sm"
+        >
+          <ul class="space-y-2 text-sm">
+            <li>
+              <strong>Built by:</strong>
+              {developerName}
+            </li>
+            <li>
+              <strong>Contact:</strong>
+              <a
+                href={`mailto:${developerEmail}`}
+                class="text-skin-accent hover:underline underline-offset-4"
+                >{developerEmail}</a
+              >
+            </li>
+            <li>
+              <strong>Support:</strong> Reach out via email for any questions, issues,
+              or feature requests.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Back to Gallery -->
+      <div class="border-skin-line border-t pt-8 text-center">
+        <a
+          href="/e-commerce-apps/wix"
+          class="text-skin-accent inline-flex items-center gap-2 font-medium underline-offset-4 hover:underline"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"></path>
+          </svg>
+          Back to Wix Apps Gallery
+        </a>
+      </div>
+    </article>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,239 @@
+
+> devlinduldulao@5.4.3 build
+> astro check && astro build && pagefind --site dist && cp -r dist/pagefind public/
+
+[2m12:10:46[22m [34m[content][39m Syncing content
+[2m12:10:46[22m [34m[content][39m Synced content
+[2m12:10:46[22m [34m[types][39m Generated [2m394ms[22m
+[2m12:10:46[22m [34m[check][39m Getting diagnostics for Astro files in C:\Users\DEVDUL\Documents\DEVELOPMENT\devlinduldulao...
+Result (77 files): 
+- 0 errors
+- 0 warnings
+- 0 hints
+
+(node:22116) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[2m12:10:53[22m [34m[vite][39m Re-optimizing dependencies because vite config has changed
+[2m12:10:53[22m [34m[content][39m Syncing content
+[2m12:10:53[22m [34m[content][39m Synced content
+[2m12:10:53[22m [34m[types][39m Generated [2m472ms[22m
+[2m12:10:53[22m [34m[build][39m output: [34m"static"[39m
+[2m12:10:53[22m [34m[build][39m mode: [34m"static"[39m
+[2m12:10:53[22m [34m[build][39m directory: [34mC:\Users\DEVDUL\Documents\DEVELOPMENT\devlinduldulao\dist\[39m
+[2m12:10:53[22m [34m[build][39m adapter: [32m@astrojs/vercel[39m
+[2m12:10:53[22m [34m[build][39m Collecting build info...
+[2m12:10:53[22m [34m[build][39m [32mΓ£ô Completed in 526ms.[39m
+[2m12:10:53[22m [34m[build][39m Building static entrypoints...
+[2m12:10:55[22m [34m[vite][39m [32mΓ£ô built in 1.27s[39m
+[2m12:10:55[22m [34m[vite][39m [32mΓ£ô built in 507ms[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "node:fs" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@astrojs/vercel/dist/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "node:url" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@astrojs/vercel/dist/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "url" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@vercel/routing-utils/dist/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "node:path" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@astrojs/vercel/dist/lib/redirects.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "node:fs" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@astrojs/internal-helpers/dist/fs.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "node:fs/promises" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@astrojs/internal-helpers/dist/fs.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "node:path" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@astrojs/internal-helpers/dist/fs.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "node:url" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@astrojs/internal-helpers/dist/fs.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "node:path" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@astrojs/vercel/dist/lib/nft.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "node:url" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@astrojs/vercel/dist/lib/nft.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "node:fs" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@astrojs/vercel/dist/serverless/middleware.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "node:module" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@astrojs/vercel/dist/serverless/middleware.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "node:url" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@astrojs/vercel/dist/serverless/middleware.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[2m12:10:55[22m [34m[build][39m Rearranging server assets...
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "url" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@vercel/routing-utils/dist/superstatic.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "node:fs" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@astrojs/vercel/dist/lib/searchRoot.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "node:path" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@astrojs/vercel/dist/lib/searchRoot.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/esbuild/lib/main.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "os" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/esbuild/lib/main.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "path" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/esbuild/lib/main.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "child_process" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/esbuild/lib/main.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "crypto" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/esbuild/lib/main.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "tty" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/esbuild/lib/main.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "worker_threads" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/esbuild/lib/main.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+
+[42m[30m generating static routes [39m[49m
+[2m12:10:55[22m   [34mΓö£ΓöÇ[39m [2m/404.html[22m[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "path" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@vercel/nft/out/resolve-dependency.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "module" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@vercel/nft/out/resolve-dependency.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "path" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@vercel/nft/out/node-file-trace.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "os" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@vercel/nft/out/utils/sharedlib-emit.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "path" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@vercel/nft/out/utils/sharedlib-emit.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "path" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@vercel/nft/out/analyze.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "url" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@vercel/nft/out/analyze.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "os" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@vercel/nft/out/analyze.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "path" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@vercel/nft/out/fs.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+ [2m(+65ms)[22m 
+[2m12:10:55[22m   [34mΓö£ΓöÇ[39m [2m/archives/index.html[22m[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "path" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@rollup/pluginutils/dist/cjs/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "path" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@vercel/nft/out/utils/special-cases.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "path" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/resolve-from/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "module" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/resolve-from/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/resolve-from/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:55[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "events" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/async-sema/lib/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "node:events" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/glob/dist/commonjs/index.min.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "node:stream" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/glob/dist/commonjs/index.min.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "node:string_decoder" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/glob/dist/commonjs/index.min.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "node:path" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/glob/dist/commonjs/index.min.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "node:url" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/glob/dist/commonjs/index.min.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/glob/dist/commonjs/index.min.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "node:fs" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/glob/dist/commonjs/index.min.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "node:fs/promises" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/glob/dist/commonjs/index.min.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+ [2m(+127ms)[22m 
+[2m12:10:56[22m   [34mΓö£ΓöÇ[39m [2m/cfp/index.html[22m[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "path" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@vercel/nft/out/utils/binary-locators.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/bindings/bindings.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "path" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/bindings/bindings.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@mapbox/node-pre-gyp/lib/node-pre-gyp.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "path" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@mapbox/node-pre-gyp/lib/node-pre-gyp.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "events" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@mapbox/node-pre-gyp/lib/node-pre-gyp.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "util" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@mapbox/node-pre-gyp/lib/node-pre-gyp.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/graceful-fs/graceful-fs.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "util" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/graceful-fs/graceful-fs.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "assert" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/graceful-fs/graceful-fs.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/node-gyp-build/node-gyp-build.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "path" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/node-gyp-build/node-gyp-build.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "os" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/node-gyp-build/node-gyp-build.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "path" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/file-uri-to-path/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@mapbox/node-pre-gyp/lib/util/napi.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "path" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "stream" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/graceful-fs/legacy-streams.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+ [2m(+82ms)[22m 
+[2m12:10:56[22m   [34mΓö£ΓöÇ[39m [2m/e-commerce-apps/adobe-commerce/index.html[22m[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "path" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "url" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "constants" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/graceful-fs/polyfills.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "url" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/nopt/lib/type-defs.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "path" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/nopt/lib/type-defs.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "stream" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/nopt/lib/type-defs.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "os" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/nopt/lib/type-defs.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "child_process" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/detect-libc/lib/detect-libc.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+ [2m(+64ms)[22m 
+[2m12:10:56[22m   [34mΓö£ΓöÇ[39m [2m/e-commerce-apps/bigcommerce/index.html[22m[33m[1m12:10:56[22m [WARN] [vite][39m [33m[plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "C:/Users/DEVDUL/Documents/DEVELOPMENT/devlinduldulao/node_modules/detect-libc/lib/filesystem.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.[39m
+ [2m(+44ms)[22m 
+[2m12:10:56[22m   [34mΓö£ΓöÇ[39m [2m/e-commerce-apps/ecwid/index.html[22m [2m(+8ms)[22m 
+[2m12:10:56[22m   [34mΓö£ΓöÇ[39m [2m/e-commerce-apps/opencart/index.html[22m [2m(+9ms)[22m 
+[2m12:10:56[22m   [34mΓö£ΓöÇ[39m [2m/e-commerce-apps/prestashop/index.html[22m [2m(+8ms)[22m 
+[2m12:10:56[22m   [34mΓö£ΓöÇ[39m [2m/e-commerce-apps/shopify/index.html[22m [2m(+7ms)[22m 
+[2m12:10:56[22m   [34mΓö£ΓöÇ[39m [2m/e-commerce-apps/woocommerce/index.html[22m [2m(+8ms)[22m 
+[2m12:10:56[22m   [34mΓö£ΓöÇ[39m [2m/e-commerce-apps/index.html[22m [2m(+9ms)[22m 
+[2m12:10:56[22m   [34mΓö£ΓöÇ[39m [2m/og.png[22m [31m(+558ms)[39m 
+[2m12:10:56[22m   [34mΓö£ΓöÇ[39m [2m/posts/a-quick-overview-of-supply-chain-attacks/index.png[22m [2m(+233ms)[22m 
+[2m12:10:57[22m   [34mΓö£ΓöÇ[39m [2m/posts/deconstructing-the-model-context-protocol-the-lingua-franca-for-ai-agents/index.png[22m [2m(+243ms)[22m 
+[2m12:10:57[22m   [34mΓö£ΓöÇ[39m [2m/posts/doing-internalization-in-angular/index.png[22m [2m(+241ms)[22m 
+[2m12:10:57[22m   [34mΓö£ΓöÇ[39m [2m/posts/essential-javascript-design-patterns-building-blocks-of-web-applications/index.png[22m [2m(+234ms)[22m 
+[2m12:10:57[22m   [34mΓö£ΓöÇ[39m [2m/posts/exploring-the-power-of-generator-functions-in-javascript/index.png[22m [2m(+245ms)[22m 
+[2m12:10:58[22m   [34mΓö£ΓöÇ[39m [2m/posts/how-html-css-and-javascript-journey-through-the-network-and-get-rendered-in-the-browser/index.png[22m [2m(+243ms)[22m 
+[2m12:10:58[22m   [34mΓö£ΓöÇ[39m [2m/posts/microservices-best-practices-a-guide-to-successful-application-design/index.png[22m [2m(+241ms)[22m 
+[2m12:10:58[22m   [34mΓö£ΓöÇ[39m [2m/posts/qwik-the-next-evolution-in-frontend-frameworks/index.png[22m [2m(+251ms)[22m 
+[2m12:10:58[22m   [34mΓö£ΓöÇ[39m [2m/posts/securing-the-ai-agent-revolution-mcp-authentication-authorization/index.png[22m [2m(+250ms)[22m 
+[2m12:10:59[22m   [34mΓö£ΓöÇ[39m [2m/posts/symbol-keyword-in-javascript/index.png[22m [2m(+243ms)[22m 
+[2m12:10:59[22m   [34mΓö£ΓöÇ[39m [2m/posts/the-bangladesh-bank-heist-a-lesson-in-cybersecurity/index.png[22m [2m(+271ms)[22m 
+[2m12:10:59[22m   [34mΓö£ΓöÇ[39m [2m/posts/the-enigmatic-world-of-revil-unmasking-the-hacker-group/index.png[22m [2m(+259ms)[22m 
+[2m12:10:59[22m   [34mΓö£ΓöÇ[39m [2m/posts/the-protocol-for-ai-agents-building-scalable-secure-full-stack-applications-with-mcp/index.png[22m [2m(+250ms)[22m 
+[2m12:11:00[22m   [34mΓö£ΓöÇ[39m [2m/posts/the-solarwinds-hack-unraveling-the-truth-and-preventing-future-attacks/index.png[22m [2m(+247ms)[22m 
+[2m12:11:00[22m   [34mΓö£ΓöÇ[39m [2m/posts/understanding-closure-in-javascript-and-its-importance/index.png[22m [2m(+230ms)[22m 
+[2m12:11:00[22m   [34mΓö£ΓöÇ[39m [2m/posts/understanding-the-difference-libraries-vs-sdks-in-software-development/index.png[22m [2m(+237ms)[22m 
+[2m12:11:00[22m   [34mΓö£ΓöÇ[39m [2m/posts/understanding-the-language-processors-transpiler-parser-compiler-and-bundler-in-software-development/index.png[22m [2m(+254ms)[22m 
+[2m12:11:01[22m   [34mΓö£ΓöÇ[39m [2m/posts/unveiling-global-state-management-in-angular-with-signals-with-localstorage/index.png[22m [2m(+273ms)[22m 
+[2m12:11:01[22m   [34mΓö£ΓöÇ[39m [2m/posts/when-and-where-to-use-generator-functions-practical-use-cases/index.png[22m [2m(+234ms)[22m 
+[2m12:11:01[22m   [34mΓö£ΓöÇ[39m [2m/posts/writing-an-accessible-angular-application-a-comprehensive-guide/index.png[22m [2m(+243ms)[22m 
+[2m12:11:01[22m   [34mΓö£ΓöÇ[39m [2m/posts/writing-unit-tests-with-jest/index.png[22m [2m(+252ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/zero-day-vulnerability-in-a-nutshell-understanding-the-threat-safeguarding-with-auth0/index.png[22m [2m(+246ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/index.html[22m [2m(+5ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/2/index.html[22m [2m(+3ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/3/index.html[22m [2m(+3ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/4/index.html[22m [2m(+3ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/5/index.html[22m [2m(+3ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/6/index.html[22m [2m(+3ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/a-quick-overview-of-supply-chain-attacks/index.html[22m [2m(+4ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/deconstructing-the-model-context-protocol-the-lingua-franca-for-ai-agents/index.html[22m [2m(+8ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/doing-internalization-in-angular/index.html[22m [2m(+4ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/essential-javascript-design-patterns-building-blocks-of-web-applications/index.html[22m [2m(+4ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/exploring-the-power-of-generator-functions-in-javascript/index.html[22m [2m(+4ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/how-html-css-and-javascript-journey-through-the-network-and-get-rendered-in-the-browser/index.html[22m [2m(+3ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/microservices-best-practices-a-guide-to-successful-application-design/index.html[22m [2m(+4ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/qwik-the-next-evolution-in-frontend-frameworks/index.html[22m [2m(+4ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/securing-the-ai-agent-revolution-mcp-authentication-authorization/index.html[22m [2m(+10ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/symbol-keyword-in-javascript/index.html[22m [2m(+4ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/the-bangladesh-bank-heist-a-lesson-in-cybersecurity/index.html[22m [2m(+4ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/the-enigmatic-world-of-revil-unmasking-the-hacker-group/index.html[22m [2m(+4ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/the-protocol-for-ai-agents-building-scalable-secure-full-stack-applications-with-mcp/index.html[22m [2m(+6ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/the-solarwinds-hack-unraveling-the-truth-and-preventing-future-attacks/index.html[22m [2m(+4ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/understanding-closure-in-javascript-and-its-importance/index.html[22m [2m(+3ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/understanding-the-difference-libraries-vs-sdks-in-software-development/index.html[22m [2m(+3ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/understanding-the-language-processors-transpiler-parser-compiler-and-bundler-in-software-development/index.html[22m [2m(+3ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/unveiling-global-state-management-in-angular-with-signals-with-localstorage/index.html[22m [2m(+3ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/when-and-where-to-use-generator-functions-practical-use-cases/index.html[22m [2m(+4ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/writing-an-accessible-angular-application-a-comprehensive-guide/index.html[22m [2m(+4ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/writing-unit-tests-with-jest/index.html[22m [2m(+3ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/posts/zero-day-vulnerability-in-a-nutshell-understanding-the-threat-safeguarding-with-auth0/index.html[22m [2m(+3ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/robots.txt[22m [2m(+4ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/rss.xml[22m [2m(+38ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/search/index.html[22m [2m(+10ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/speaking/index.html[22m [2m(+18ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/tags/ai/index.html[22m [2m(+6ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/tags/angular/index.html[22m [2m(+3ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/tags/api/index.html[22m [2m(+3ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/tags/architecture/index.html[22m [2m(+3ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/tags/csharp/index.html[22m [2m(+3ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/tags/dotnet/index.html[22m [2m(+3ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/tags/fullstack/index.html[22m [2m(+4ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/tags/java/index.html[22m [2m(+5ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/tags/javascript/index.html[22m [2m(+5ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/tags/javascript/2/index.html[22m [2m(+3ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/tags/javascript/3/index.html[22m [2m(+2ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/tags/mcp/index.html[22m [2m(+2ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/tags/nextjs/index.html[22m [2m(+2ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/tags/python/index.html[22m [2m(+3ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/tags/security/index.html[22m [2m(+3ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/tags/security/2/index.html[22m [2m(+2ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/tags/typescript/index.html[22m [2m(+2ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/tags/typescript/2/index.html[22m [2m(+2ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/tags/web-development/index.html[22m [2m(+2ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/tags/index.html[22m [2m(+5ms)[22m 
+[2m12:11:02[22m   [34mΓö£ΓöÇ[39m [2m/index.html[22m [2m(+7ms)[22m 
+[2m12:11:02[22m [32mΓ£ô Completed in 6.80s.
+[39m
+[42m[30m generating optimized images [39m[49m
+[2m12:11:02[22m   [32mΓû╢[39m /_astro/communication_flow.D-cVK-cV_Z27d7Ls.webp [2m(reused cache entry)[22m [2m(+1ms)[22m [2m(1/11)[22m
+[2m12:11:02[22m   [32mΓû╢[39m /_astro/secure_communication_between_mcp_servers.C8BOF_3x_Z2eEt5Y.webp [2m(reused cache entry)[22m [2m(+1ms)[22m [2m(2/11)[22m
+[2m12:11:02[22m   [32mΓû╢[39m /_astro/communication_flow.D-cVK-cV_4KLAs.webp [2m(reused cache entry)[22m [2m(+1ms)[22m [2m(3/11)[22m
+[2m12:11:02[22m   [32mΓû╢[39m /_astro/secure_communication_between_mcp_servers.C8BOF_3x_H5kec.webp [2m(reused cache entry)[22m [2m(+1ms)[22m [2m(4/11)[22m
+[2m12:11:02[22m   [32mΓû╢[39m /_astro/communication_flow.D-cVK-cV_qYJCG.webp [2m(reused cache entry)[22m [2m(+1ms)[22m [2m(5/11)[22m
+[2m12:11:02[22m   [32mΓû╢[39m /_astro/communication_flow.D-cVK-cV_Ziahas.webp [2m(reused cache entry)[22m [2m(+1ms)[22m [2m(6/11)[22m
+[2m12:11:02[22m   [32mΓû╢[39m /_astro/communication_flow.D-cVK-cV_TpV5f.webp [2m(reused cache entry)[22m [2m(+1ms)[22m [2m(7/11)[22m
+[2m12:11:02[22m   [32mΓû╢[39m /_astro/communication_flow.D-cVK-cV_1VJ2gs.webp [2m(reused cache entry)[22m [2m(+1ms)[22m [2m(8/11)[22m
+[2m12:11:02[22m   [32mΓû╢[39m /_astro/communication_flow.D-cVK-cV_9qIGd.webp [2m(reused cache entry)[22m [2m(+1ms)[22m [2m(9/11)[22m
+[2m12:11:02[22m   [32mΓû╢[39m /_astro/communication_flow.D-cVK-cV_zVFf2.webp [2m(reused cache entry)[22m [2m(+1ms)[22m [2m(10/11)[22m
+[2m12:11:02[22m   [32mΓû╢[39m /_astro/communication_flow.D-cVK-cV_Z1Hbajp.webp [2m(reused cache entry)[22m [2m(+1ms)[22m [2m(11/11)[22m
+[2m12:11:02[22m [32mΓ£ô Completed in 11ms.
+[39m
+[2m12:11:02[22m [34m[build][39m [32mΓ£ô Completed in 8.85s.[39m
+[2m12:11:02[22m [34m[@astrojs/sitemap][39m `sitemap-index.xml` created at `dist`
+[2m12:11:02[22m [34m[@astrojs/vercel][39m Copying static files to .vercel/output/static
+[2m12:11:02[22m [34m[build][39m 62 page(s) built in [1m9.53s[22m
+[2m12:11:02[22m [34m[build][39m [1mComplete![22m
+
+Running Pagefind v1.4.0 (Extended)
+Running from: "C:\\Users\\DEVDUL\\Documents\\DEVELOPMENT\\devlinduldulao"
+Source:       "dist"
+Output:       "dist\\pagefind"
+
+[Walking source directory]
+Found 62 files matching **/*.{html}
+
+[Parsing files]
+Found a data-pagefind-body element on the site.
+Γå│ Ignoring pages without this tag.
+
+[Reading languages]
+Discovered 1 language: en
+
+[Building search indexes]
+Total: 
+  Indexed 1 language
+  Indexed 22 pages
+  Indexed 2405 words
+  Indexed 0 filters
+  Indexed 0 sorts
+
+Finished in 0.384 seconds
+'cp' is not recognized as an internal or external command,
+operable program or batch file.

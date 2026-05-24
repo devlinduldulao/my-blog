@@ -1,0 +1,108 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+
+const developerName = "Devlin Duldulao";
+const developerEmail = "devlinduldulao@gmail.com";
+
+const apps = [
+  {
+    name: "Live Visitor Geo Pulse",
+    slug: "live-visitor-geo-pulse",
+    description:
+      "A Wix eCommerce admin app that shows anonymous live storefront presence by country, device, and page — without a separate database, Redis cache, or analytics warehouse.",
+    status: "pending-approval" as const,
+  },
+];
+---
+
+<Layout title={`Developer Plugins & Apps Gallery for Wix`}>
+  <Header />
+  <main id="main-content">
+    <section id="hero" class="mx-auto max-w-4xl px-4 py-8">
+      <div class="mb-12 text-center">
+        <h1 class="mb-4 text-3xl font-bold">Wix Apps & Plugins Gallery</h1>
+        <p class="text-skin-base mb-4">
+          A showcase of plugins and applications built to enhance your Wix
+          e-commerce experience.
+        </p>
+
+        <div
+          class="bg-skin-card border-skin-line inline-block rounded-lg border p-6 text-left shadow-sm"
+        >
+          <h2
+            class="border-skin-line mb-3 border-b-2 pb-2 text-xl font-semibold"
+          >
+            Developer Information
+          </h2>
+          <ul class="space-y-2">
+            <li><strong>Developer:</strong> {developerName}</li>
+            <li>
+              <strong>Email:</strong>
+              <a
+                href={`mailto:${developerEmail}`}
+                class="text-skin-accent hover:text-skin-accent underline decoration-dashed underline-offset-4"
+                >{developerEmail}</a
+              >
+            </li>
+            <li>
+              <strong>Marketplace:</strong>
+              <a
+                href="https://www.wix.com/app-market"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-skin-accent hover:text-skin-accent underline decoration-dashed underline-offset-4"
+                >Wix App Market</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {
+          apps.map(app => (
+            <div class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md">
+              <img
+                class="bg-skin-fill h-48 w-full object-cover"
+                src={`https://via.placeholder.com/600x400?text=${encodeURIComponent(app.name)}`}
+                alt={`${app.name} placeholder image`}
+                loading="lazy"
+              />
+              <div class="flex grow flex-col p-4">
+                <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+                  {app.name}
+                </h3>
+                <p class="mb-4 grow text-sm opacity-80">
+                  {app.description}
+                </p>
+                {app.slug ? (
+                  <a
+                    href={`/e-commerce-apps/wix/${app.slug}`}
+                    class="bg-skin-accent text-skin-inverted mt-auto block w-full rounded px-4 py-2 text-center text-sm font-medium hover:brightness-110"
+                  >
+                    View Details
+                  </a>
+                ) : (
+                  <button
+                    class="bg-skin-accent text-skin-inverted mt-auto w-full cursor-not-allowed rounded px-4 py-2 text-sm font-medium opacity-70 hover:brightness-110"
+                    disabled
+                  >
+                    Coming Soon
+                  </button>
+                )}
+                {app.status === "pending-approval" && (
+                  <span class="mt-2 block text-center text-xs font-medium opacity-60">
+                    Pending Wix App Market approval
+                  </span>
+                )}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

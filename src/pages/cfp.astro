@@ -1,0 +1,20 @@
+---
+import { SITE } from "@/config";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import CfpList from "@/components/CfpList";
+---
+
+<Layout title={`CFP | ${SITE.title}`}>
+  <Header activeNav="cfp" />
+  <Breadcrumb />
+  <main id="main-content">
+    <section id="speaking" class="mb-28 max-w-3xl prose-img:border-0">
+      <h1 class="text-2xl tracking-wider sm:text-3xl">Cfps</h1>
+      <CfpList client:load />
+    </section>
+  </main>
+  <Footer />
+</Layout>

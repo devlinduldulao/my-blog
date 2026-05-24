@@ -1,0 +1,239 @@
+---
+import IconX from "@/assets/icons/IconX.svg";
+import IconMoon from "@/assets/icons/IconMoon.svg";
+import IconSearch from "@/assets/icons/IconSearch.svg";
+import IconArchive from "@/assets/icons/IconArchive.svg";
+import IconSunHigh from "@/assets/icons/IconSunHigh.svg";
+import IconMenuDeep from "@/assets/icons/IconMenuDeep.svg";
+import LinkButton from "./LinkButton.astro";
+import { SITE } from "@/config";
+
+const { pathname } = Astro.url;
+
+// Remove trailing slash from current pathname if exists
+const currentPath =
+  pathname.endsWith("/") && pathname !== "/" ? pathname.slice(0, -1) : pathname;
+
+const isActive = (path: string) => {
+  const currentPathArray = currentPath.split("/").filter(p => p.trim());
+  const pathArray = path.split("/").filter(p => p.trim());
+
+  return currentPath === path || currentPathArray[0] === pathArray[0];
+};
+---
+
+<header
+  class="sticky top-0 z-30 w-full border-b border-border/50 bg-background/80 backdrop-blur-md transition-all duration-300"
+>
+  <a
+    id="skip-to-content"
+    href="#main-content"
+    class="absolute start-16 -top-full z-50 rounded-b-lg bg-accent px-4 py-2 font-bold text-white transition-all focus:top-0"
+  >
+    Skip to content
+  </a>
+  <div
+    id="nav-container"
+    class="mx-auto flex max-w-app flex-col items-center justify-between sm:flex-row"
+  >
+    <div
+      id="top-nav-wrap"
+      class="relative flex w-full items-center justify-between p-4 sm:py-6"
+    >
+      <a
+        href="/"
+        class="text-2xl font-bold tracking-tight transition-colors duration-300 hover:text-accent"
+      >
+        {SITE.title}
+      </a>
+      <nav
+        id="nav-menu"
+        class="flex w-full flex-col items-center sm:ms-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0"
+      >
+        <button
+          id="menu-btn"
+          class="focus-outline self-end rounded-md p-2 transition-colors hover:bg-muted/10 sm:hidden"
+          aria-label="Open Menu"
+          aria-expanded="false"
+          aria-controls="menu-items"
+        >
+          <IconX id="close-icon" class="hidden" />
+          <IconMenuDeep id="menu-icon" />
+        </button>
+        <ul
+          id="menu-items"
+          class:list={[
+            "mt-4 grid w-full grid-cols-2 gap-4 rounded-lg bg-secondary/50 p-4 sm:bg-transparent sm:p-0",
+            "[&>li>a]:block [&>li>a]:rounded-md [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:text-center [&>li>a]:font-medium [&>li>a]:transition-colors [&>li>a]:hover:bg-accent/10 [&>li>a]:hover:text-accent sm:[&>li>a]:px-3 sm:[&>li>a]:py-1.5",
+            "hidden",
+            "sm:mt-0 sm:flex sm:w-auto sm:items-center sm:gap-x-2 sm:gap-y-0",
+          ]}
+        >
+          <li class="col-span-2 sm:col-span-1">
+            <a href="/posts" class:list={{ "active-nav": isActive("/posts") }}>
+              Posts
+            </a>
+          </li>
+          <!-- <li class="group relative col-span-2 sm:col-span-1">
+            <a
+              href="/e-commerce-apps"
+              class:list={[
+                { "active-nav": isActive("/e-commerce-apps") },
+                "inline-flex items-center justify-center",
+              ]}
+            >
+              E-Commerce
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="ml-1 hidden h-4 w-4 opacity-70 transition-transform duration-200 group-hover:rotate-180 sm:inline-block"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </a>
+            <ul
+              class="z-50 mt-1 flex w-full min-w-[200px] flex-col rounded-lg border-none bg-secondary/30 p-1 sm:absolute sm:top-full sm:left-1/2 sm:hidden sm:w-auto sm:-translate-x-1/2 sm:border sm:border-border/50 sm:bg-background sm:p-2 sm:shadow-lg sm:group-hover:flex"
+            >
+              <li>
+                <a
+                  href="/e-commerce-apps/adobe-commerce"
+                  class="block w-full rounded-md px-4 py-2 text-center text-sm font-medium transition-colors hover:bg-accent/10 hover:text-accent sm:text-left"
+                  >Adobe Commerce</a>
+              </li>
+              <li>
+                <a
+                  href="/e-commerce-apps/bigcommerce"
+                  class="block w-full rounded-md px-4 py-2 text-center text-sm font-medium transition-colors hover:bg-accent/10 hover:text-accent sm:text-left"
+                  >BigCommerce</a>
+              </li>
+              <li>
+                <a
+                  href="/e-commerce-apps/ecwid"
+                  class="block w-full rounded-md px-4 py-2 text-center text-sm font-medium transition-colors hover:bg-accent/10 hover:text-accent sm:text-left"
+                  >Ecwid</a>
+              </li>
+              <li>
+                <a
+                  href="/e-commerce-apps/opencart"
+                  class="block w-full rounded-md px-4 py-2 text-center text-sm font-medium transition-colors hover:bg-accent/10 hover:text-accent sm:text-left"
+                  >OpenCart</a>
+              </li>
+              <li>
+                <a
+                  href="/e-commerce-apps/prestashop"
+                  class="block w-full rounded-md px-4 py-2 text-center text-sm font-medium transition-colors hover:bg-accent/10 hover:text-accent sm:text-left"
+                  >PrestaShop</a>
+              </li>
+              <li>
+                <a
+                  href="/e-commerce-apps/shopify"
+                  class="block w-full rounded-md px-4 py-2 text-center text-sm font-medium transition-colors hover:bg-accent/10 hover:text-accent sm:text-left"
+                  >Shopify</a>
+              </li>
+              <li>
+                <a
+                  href="/e-commerce-apps/wix"
+                  class="block w-full rounded-md px-4 py-2 text-center text-sm font-medium transition-colors hover:bg-accent/10 hover:text-accent sm:text-left"
+                  >Wix</a>
+              </li>
+              <li>
+                <a
+                  href="/e-commerce-apps/woocommerce"
+                  class="block w-full rounded-md px-4 py-2 text-center text-sm font-medium transition-colors hover:bg-accent/10 hover:text-accent sm:text-left"
+                  >WooCommerce</a>
+              </li>
+            </ul>
+          </li> -->
+          <li class="col-span-2 sm:col-span-1">
+            <a href="/tags" class:list={{ "active-nav": isActive("/tags") }}>
+              Tags
+            </a>
+          </li>
+          {
+            SITE.showArchives && (
+              <li class="col-span-2 sm:col-span-1">
+                <LinkButton
+                  href="/archives"
+                  class:list={[
+                    "focus-outline flex justify-center rounded-md p-3 hover:bg-muted/10 sm:p-2",
+                    {
+                      "active-nav text-accent": isActive("/archives"),
+                    },
+                  ]}
+                  ariaLabel="archives"
+                  title="Archives"
+                >
+                  <IconArchive class="hidden scale-90 sm:inline-block" />
+                  <span class="sm:sr-only">Archives</span>
+                </LinkButton>
+              </li>
+            )
+          }
+          <li class="col-span-1 flex items-center justify-center">
+            <LinkButton
+              href="/search"
+              class:list={[
+                "focus-outline flex rounded-md p-3 hover:bg-muted/10 sm:p-2",
+                { "text-accent": isActive("/search") },
+              ]}
+              ariaLabel="search"
+              title="Search"
+            >
+              <IconSearch class="scale-90" />
+              <span class="sr-only">Search</span>
+            </LinkButton>
+          </li>
+          {
+            SITE.lightAndDarkMode && (
+              <li class="col-span-1 flex items-center justify-center">
+                <button
+                  id="theme-btn"
+                  class="focus-outline relative size-10 rounded-md p-2 transition-colors hover:bg-muted/10 sm:size-9"
+                  title="Toggles light & dark"
+                  aria-label="auto"
+                  aria-live="polite"
+                >
+                  <IconMoon class="absolute top-[50%] left-[50%] -translate-[50%] scale-100 rotate-0 transition-all duration-300 dark:scale-0 dark:-rotate-90" />
+                  <IconSunHigh class="absolute top-[50%] left-[50%] -translate-[50%] scale-0 rotate-90 transition-all duration-300 dark:scale-100 dark:rotate-0" />
+                </button>
+              </li>
+            )
+          }
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<script>
+  function toggleNav() {
+    const menuBtn = document.querySelector("#menu-btn");
+    const menuItems = document.querySelector("#menu-items");
+    const menuIcon = document.querySelector("#menu-icon");
+    const closeIcon = document.querySelector("#close-icon");
+
+    if (!menuBtn || !menuItems || !menuIcon || !closeIcon) return;
+
+    menuBtn.addEventListener("click", () => {
+      const openMenu = menuBtn.getAttribute("aria-expanded") === "true";
+
+      menuBtn.setAttribute("aria-expanded", openMenu ? "false" : "true");
+      menuBtn.setAttribute("aria-label", openMenu ? "Open Menu" : "Close Menu");
+
+      menuItems.classList.toggle("hidden");
+      menuIcon.classList.toggle("hidden");
+      closeIcon.classList.toggle("hidden");
+    });
+  }
+
+  toggleNav();
+
+  // Runs on view transitions navigation
+  document.addEventListener("astro:after-swap", toggleNav);
+</script>

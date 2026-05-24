@@ -1,0 +1,193 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+
+const developerName = "Devlin Duldulao";
+const developerEmail = "devlinduldulao@gmail.com";
+const marketplaceMemberUrl =
+  "https://www.opencart.com/index.php?route=marketplace/extension&filter_member=devlinduldulao";
+
+const plugins = [
+  {
+    name: "Accessibility Friction Overlay",
+    slug: "accessibility-friction-overlay",
+    version: "1.0.0",
+    license: "MIT",
+    price: "Free",
+    emoji: "♿",
+    summary:
+      "Merchant-facing accessibility friction monitoring with a live dashboard and preview walkthroughs.",
+  },
+  {
+    name: "Checkout Geo Flash",
+    slug: "checkout-geo-flash",
+    version: "1.0.0",
+    license: "MIT",
+    price: "Free",
+    emoji: "🌍",
+    summary:
+      "Owner-only OpenCart dashboard for recent checkout and paid-order activity.",
+  },
+  {
+    name: "Live Checkout Friction Monitor",
+    slug: "live-checkout-friction-monitor",
+    version: "1.0.0",
+    license: "MIT",
+    price: "Free",
+    emoji: "🧪",
+    summary:
+      "Privacy-first telemetry for OpenCart checkout operations with short-lived local storage.",
+  },
+  {
+    name: "Live Visitor Geo Pulse",
+    slug: "live-visitor-geo-pulse",
+    version: "1.0.0",
+    license: "MIT",
+    price: "Free",
+    emoji: "🌐",
+    summary:
+      "Real-time visitor presence with country and device mix, no IP storage required.",
+  },
+  {
+    name: "Realtime Mouse Tracker",
+    slug: "realtime-mouse-tracker",
+    version: "1.1.0",
+    license: "MIT",
+    price: "Free",
+    emoji: "🖱️",
+    summary:
+      "Operator-focused live storefront interaction signals without extra infrastructure.",
+  },
+  {
+    name: "Storefront Error Radar",
+    slug: "storefront-error-radar",
+    version: "1.0.0",
+    license: "MIT",
+    price: "Free",
+    emoji: "🚨",
+    summary:
+      "Spot live storefront breakage with a privacy-first incident snapshot dashboard.",
+  },
+  {
+    name: "Theme Performance Pulse",
+    slug: "theme-performance-pulse",
+    version: "1.0.1",
+    license: "MIT",
+    price: "Free",
+    emoji: "⚡",
+    summary:
+      "Short-lived storefront performance monitoring with a live admin snapshot.",
+  },
+  {
+    name: "Variant Confusion Detector",
+    slug: "variant-confusion-detector",
+    version: "1.0.0",
+    license: "MIT",
+    price: "Free",
+    emoji: "🧩",
+    summary:
+      "See where shoppers get stuck on product options before conversion drops.",
+  },
+];
+---
+
+<Layout title={`Developer Plugins & Apps Gallery for OpenCart`}>
+  <Header />
+  <main id="main-content">
+    <section id="hero" class="mx-auto max-w-4xl px-4 py-8">
+      <div class="mb-12 text-center">
+        <h1 class="mb-4 text-3xl font-bold">
+          OpenCart Apps & Plugins Gallery
+        </h1>
+        <p class="text-skin-base mb-4">
+          A showcase of OpenCart extensions built to improve merchant workflows,
+          storefront quality, and operational visibility.
+        </p>
+
+        <div
+          class="bg-skin-card border-skin-line inline-block rounded-lg border p-6 text-left shadow-sm"
+        >
+          <h2
+            class="border-skin-line mb-3 border-b-2 pb-2 text-xl font-semibold"
+          >
+            Developer Information
+          </h2>
+          <ul class="space-y-2">
+            <li><strong>Developer:</strong> {developerName}</li>
+            <li>
+              <strong>Email:</strong>
+              <a
+                href={`mailto:${developerEmail}`}
+                class="text-skin-accent hover:text-skin-accent underline decoration-dashed underline-offset-4"
+                >{developerEmail}</a
+              >
+            </li>
+            <li>
+              <strong>Marketplace:</strong>
+              <a
+                href={marketplaceMemberUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-skin-accent hover:text-skin-accent underline decoration-dashed underline-offset-4"
+                >OpenCart Marketplace</a
+              >
+            </li>
+            <li>
+              <strong>Developer Marketplace:</strong>
+              <a
+                href={marketplaceMemberUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-skin-accent hover:text-skin-accent underline decoration-dashed underline-offset-4"
+                >OpenCart Developer Listing</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {plugins.map((plugin) => (
+          <article class="border-skin-line bg-skin-card flex flex-col overflow-hidden rounded-lg border shadow-sm transition hover:shadow-md">
+            <div class="bg-skin-fill flex h-48 w-full items-center justify-center text-5xl">
+              {plugin.emoji}
+            </div>
+            <div class="flex grow flex-col p-4">
+              <div class="mb-2 flex flex-wrap items-center gap-1.5">
+                <span class="bg-skin-accent text-skin-inverted rounded px-1.5 py-0.5 text-xs font-semibold">
+                  v{plugin.version}
+                </span>
+                <span class="border-skin-line rounded border px-1.5 py-0.5 text-xs opacity-60">
+                  {plugin.price}
+                </span>
+                <span class="border-skin-line rounded border px-1.5 py-0.5 text-xs opacity-60">
+                  {plugin.license}
+                </span>
+              </div>
+              <h3 class="text-skin-accent mb-2 text-xl font-semibold">
+                {plugin.name}
+              </h3>
+              <p class="mb-4 grow text-sm opacity-80">
+                {plugin.summary}
+              </p>
+              <div class="mt-auto grid gap-2">
+                <a
+                  href={`/e-commerce-apps/opencart/${plugin.slug}/`}
+                  class="bg-skin-accent text-skin-inverted block w-full rounded px-4 py-2 text-center text-sm font-medium transition hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-skin-accent focus-visible:ring-offset-2"
+                >View Plugin</a>
+                <a
+                  href={marketplaceMemberUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="border-skin-line text-skin-accent block w-full rounded border px-4 py-2 text-center text-sm font-medium transition hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-skin-accent focus-visible:ring-offset-2"
+                >Marketplace Listing</a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
