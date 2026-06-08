@@ -1,5 +1,26 @@
 const talks: Talk[] = [
   {
+    event: "React Alicante 2026",
+    date: "September 2026",
+    location: "Alicante, Spain",
+    title: "TanStack Query and Hey API",
+    url: "https://reactalicante.es",
+  },
+  {
+    event: "dotjs 2026",
+    date: "September 2026",
+    location: "Paris, France",
+    title: "Temporal API in JavaScript",
+    url: "https://www.dotjs.io",
+  },
+  {
+    event: "KCDC 2026",
+    date: "September 2026",
+    location: "Kansas City, Missouri, USA",
+    title: "Microfrontends with Module Federation",
+    url: "https://www.kcdc.info",
+  },
+  {
     event: "React Miami 2026",
     date: "April 2026",
     location: "Miami, Florida, USA",
