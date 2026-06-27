@@ -1,5 +1,12 @@
 const talks: Talk[] = [
   {
+    event: "JS Conf Mexico 2026",
+    date: "October 2026",
+    location: "Guadalejara, Mexico",
+    title: "Microfrontends with Module Federation",
+    url: "https://jsconfmx.org",
+  },
+  {
     event: "React Alicante 2026",
     date: "September 2026",
     location: "Alicante, Spain",
