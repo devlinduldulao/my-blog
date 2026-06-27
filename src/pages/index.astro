@@ -23,35 +23,72 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 <Layout>
   <Header />
   <main id="main-content" data-layout="index">
-    <section id="hero" class="pt-8 pb-6">
-      <h1
-        class="my-4 inline-block bg-gradient-to-r from-accent to-blue-500 bg-clip-text text-5xl font-extrabold tracking-tighter text-transparent sm:my-8 sm:text-7xl"
-      >
-        software & security
-      </h1>
-      <a
-        target="_blank"
-        href="/rss.xml"
-        class="inline-block transition-transform hover:scale-110"
-        aria-label="rss feed"
-        title="RSS Feed"
-      >
-        <IconRss
-          width={20}
-          height={20}
-          class="scale-125 stroke-accent stroke-3 rtl:-rotate-90"
+    <section
+      id="hero"
+      class="grid gap-8 pt-10 pb-10 sm:pt-14 lg:grid-cols-[1.25fr_0.75fr] lg:items-end"
+    >
+      <div>
+        <p
+          class="mb-3 font-mono text-sm font-semibold tracking-normal text-brand"
+        >
+          Software engineering, security, and practical web systems
+        </p>
+        <h1 class="max-w-3xl text-5xl leading-none font-extrabold sm:text-7xl">
+          Devlin Duldulao
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-muted">
+          Creator of DaloyJS, software engineer, educator, and published author
+          with 12+ years of experience building and teaching modern web
+          development. Based in Norway since 2019, writing for developers who
+          want to ship real, secure systems.
+        </p>
+        <div class="mt-6 flex flex-wrap items-center gap-3">
+          <a
+            target="_blank"
+            href="/rss.xml"
+            class="inline-flex items-center gap-2 rounded-md border border-border bg-surface px-4 py-2 font-semibold text-foreground shadow-sm transition hover:border-accent hover:text-accent"
+            aria-label="rss feed"
+            title="RSS Feed"
+          >
+            <IconRss
+              width={18}
+              height={18}
+              class="stroke-accent stroke-3 rtl:-rotate-90"
+            />
+            RSS
+          </a>
+          <span
+            class="rounded-md bg-secondary px-3 py-2 font-mono text-xs font-semibold text-muted"
+          >
+            TypeScript
+          </span>
+          <span
+            class="rounded-md bg-secondary px-3 py-2 font-mono text-xs font-semibold text-muted"
+          >
+            Angular
+          </span>
+          <span
+            class="rounded-md bg-secondary px-3 py-2 font-mono text-xs font-semibold text-muted"
+          >
+            AppSec
+          </span>
+        </div>
+      </div>
+      <figure class="relative">
+        <img
+          src="https://res.cloudinary.com/dtxpbduyz/image/upload/v1703516040/wszymcp48oq2jomkiaer.jpg"
+          alt="Devlin Duldulao speaking at a conference"
+          class="aspect-[4/5] w-full rounded-lg border border-border object-cover shadow-[var(--shadow)]"
+          loading="eager"
         />
-        <span class="sr-only">RSS Feed</span>
-      </a>
-
-      <p class="text-lg leading-8 text-muted">
-        Devlin Duldulao is the creator of DaloyJS, a software engineer, educator, and published author with 12+ years of experience building and teaching modern web development. Originally from the Philippines and based in Norway since 2019, he writes books and courses for developers who want to ship real, secure systems, and takes his Asian home cooking about as seriously as his TypeScript.
-      </p>
+      </figure>
       {
         // only display if at least one social link is enabled
         SOCIALS.length > 0 && (
-          <div class="mt-4 flex flex-col sm:flex-row sm:items-center">
-            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div>
+          <div class="mt-2 flex flex-col sm:flex-row sm:items-center lg:col-span-2">
+            <div class="me-3 mb-2 font-mono text-xs font-semibold text-muted uppercase sm:mb-0">
+              Social links
+            </div>
             <Socials />
           </div>
         )
@@ -64,7 +101,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       featuredPosts.length > 0 && (
         <>
           <section id="featured" class="pt-12 pb-6">
-            <h2 class="text-2xl font-semibold tracking-wide">Featured</h2>
+            <h2 class="text-3xl font-bold tracking-normal">Featured</h2>
             <ul>
               {featuredPosts.map(data => (
                 <Card variant="h3" {...data} />
@@ -79,7 +116,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     {
       recentPosts.length > 0 && (
         <section id="recent-posts" class="pt-12 pb-6">
-          <h2 class="text-2xl font-semibold tracking-wide">Recent Posts</h2>
+          <h2 class="text-3xl font-bold tracking-normal">Recent Posts</h2>
           <ul>
             {recentPosts.map(
               (data, index) =>
@@ -91,7 +128,10 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     }
 
     <div class="my-8 text-center">
-      <LinkButton href="/posts/">
+      <LinkButton
+        href="/posts/"
+        class="rounded-md border border-border bg-foreground px-5 py-3 font-semibold text-background shadow-sm hover:bg-accent hover:text-accent-contrast"
+      >
         All Posts
         <IconArrowRight class="inline-block rtl:-rotate-180" />
       </LinkButton>

@@ -23,12 +23,12 @@ const isActive = (path: string) => {
 ---
 
 <header
-  class="sticky top-0 z-30 w-full border-b border-border/50 bg-background/80 backdrop-blur-md transition-all duration-300"
+  class="sticky top-0 z-30 w-full border-b border-border bg-surface/90 backdrop-blur-md transition-all duration-300"
 >
   <a
     id="skip-to-content"
     href="#main-content"
-    class="absolute start-16 -top-full z-50 rounded-b-lg bg-accent px-4 py-2 font-bold text-white transition-all focus:top-0"
+    class="absolute start-16 -top-full z-50 rounded-b-lg bg-accent px-4 py-2 font-bold text-accent-contrast transition-all focus:top-0"
   >
     Skip to content
   </a>
@@ -42,7 +42,7 @@ const isActive = (path: string) => {
     >
       <a
         href="/"
-        class="text-2xl font-bold tracking-tight transition-colors duration-300 hover:text-accent"
+        class="font-serif text-2xl font-extrabold tracking-normal transition-colors duration-300 hover:text-accent"
       >
         {SITE.title}
       </a>
@@ -52,7 +52,7 @@ const isActive = (path: string) => {
       >
         <button
           id="menu-btn"
-          class="focus-outline self-end rounded-md p-2 transition-colors hover:bg-muted/10 sm:hidden"
+          class="focus-outline self-end rounded-md border border-border bg-surface p-2 transition-colors hover:bg-secondary sm:hidden"
           aria-label="Open Menu"
           aria-expanded="false"
           aria-controls="menu-items"
@@ -64,7 +64,7 @@ const isActive = (path: string) => {
           id="menu-items"
           class:list={[
             "mt-4 grid w-full grid-cols-2 gap-4 rounded-lg bg-secondary/50 p-4 sm:bg-transparent sm:p-0",
-            "[&>li>a]:block [&>li>a]:rounded-md [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:text-center [&>li>a]:font-medium [&>li>a]:transition-colors [&>li>a]:hover:bg-accent/10 [&>li>a]:hover:text-accent sm:[&>li>a]:px-3 sm:[&>li>a]:py-1.5",
+            "[&>li>a]:block [&>li>a]:rounded-md [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:text-center [&>li>a]:font-semibold [&>li>a]:transition-colors [&>li>a]:hover:bg-accent/10 [&>li>a]:hover:text-accent sm:[&>li>a]:px-3 sm:[&>li>a]:py-1.5",
             "hidden",
             "sm:mt-0 sm:flex sm:w-auto sm:items-center sm:gap-x-2 sm:gap-y-0",
           ]}
@@ -161,7 +161,7 @@ const isActive = (path: string) => {
                 <LinkButton
                   href="/archives"
                   class:list={[
-                    "focus-outline flex justify-center rounded-md p-3 hover:bg-muted/10 sm:p-2",
+                    "focus-outline flex justify-center rounded-md p-3 hover:bg-accent/10 sm:p-2",
                     {
                       "active-nav text-accent": isActive("/archives"),
                     },
@@ -179,7 +179,7 @@ const isActive = (path: string) => {
             <LinkButton
               href="/search"
               class:list={[
-                "focus-outline flex rounded-md p-3 hover:bg-muted/10 sm:p-2",
+                "focus-outline flex rounded-md p-3 hover:bg-accent/10 sm:p-2",
                 { "text-accent": isActive("/search") },
               ]}
               ariaLabel="search"
@@ -194,7 +194,7 @@ const isActive = (path: string) => {
               <li class="col-span-1 flex items-center justify-center">
                 <button
                   id="theme-btn"
-                  class="focus-outline relative size-10 rounded-md p-2 transition-colors hover:bg-muted/10 sm:size-9"
+                  class="focus-outline relative size-10 rounded-md border border-border bg-background/60 p-2 transition-colors hover:bg-accent/10 sm:size-9"
                   title="Toggles light & dark"
                   aria-label="auto"
                   aria-live="polite"

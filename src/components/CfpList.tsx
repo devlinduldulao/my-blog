@@ -31,13 +31,13 @@ export default function CfpList() {
     <>
       <section className="my-4 flex flex-wrap gap-2">
         <button
-          className="hover:bg-skin-accent w-full rounded-md py-2 font-medium transition-colors duration-300 ease-in-out hover:text-white"
+          className="w-full rounded-md border border-border bg-surface px-4 py-2 font-semibold text-foreground transition-colors duration-300 ease-in-out hover:border-accent hover:bg-accent hover:text-accent-contrast"
           onClick={handleFilter}
         >
           Show possible open CFPs
         </button>
         <button
-          className="hover:bg-skin-accent w-full rounded-md py-2 font-medium transition-colors duration-300 ease-in-out hover:text-white"
+          className="w-full rounded-md border border-border bg-surface px-4 py-2 font-semibold text-foreground transition-colors duration-300 ease-in-out hover:border-accent hover:bg-accent hover:text-accent-contrast"
           onClick={handleNoFilter}
         >
           Show all conferences
@@ -72,10 +72,10 @@ export default function CfpList() {
                   cfp.month === sixthMonth ||
                   cfp.month === seventhMonth) &&
                   "animate-pulse",
-                "mb-5 rounded-lg bg-white p-5 shadow-lg dark:bg-gray-800"
+                "mb-5 rounded-lg border border-border bg-surface p-5 shadow-sm"
               )}
             >
-              <h3 className="text-lg font-semibold text-cyan-600 dark:text-cyan-400">
+              <h3 className="text-lg font-semibold text-accent">
                 {cfp.location}
               </h3>
               <p
@@ -93,7 +93,7 @@ export default function CfpList() {
               <a
                 href={cfp.url}
                 target="_blank"
-                className="hover:text-skin-accent text-gray-600 transition-colors duration-300 ease-in-out dark:text-gray-300"
+                className="text-muted transition-colors duration-300 ease-in-out hover:text-accent"
               >
                 <p className="text-sm sm:text-lg">{shorterDomain(cfp.url)}</p>
                 <div>

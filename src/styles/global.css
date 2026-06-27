@@ -5,30 +5,53 @@
 
 :root,
 html[data-theme="light"] {
-  --background: #f8fafc;
-  --foreground: #0f172a;
-  --accent: #0f172a;
-  --muted: #64748b;
-  --border: #e2e8f0;
-  --secondary: #f1f5f9;
+  --background: #f7f8f3;
+  --foreground: #17211b;
+  --accent: #b4431f;
+  --accent-contrast: #fff8f1;
+  --muted: #5d6b61;
+  --border: #cbd8cf;
+  --secondary: #e8f0e8;
+  --surface: #fffffb;
+  --surface-strong: #eef4ef;
+  --brand: #176b63;
+  --shadow: 0 18px 45px rgb(23 33 27 / 0.12);
 }
 
 html[data-theme="dark"] {
-  --background: #050505;
-  --foreground: #e2e8f0;
-  --accent: #00f0ff;
-  --muted: #94a3b8;
-  --border: #1e293b;
-  --secondary: #0f172a;
+  --background: #101411;
+  --foreground: #edf3ea;
+  --accent: #ff8a4c;
+  --accent-contrast: #1a0e08;
+  --muted: #a5b1a7;
+  --border: #344039;
+  --secondary: #1b241e;
+  --surface: #151b17;
+  --surface-strong: #202a23;
+  --brand: #6ed4bd;
+  --shadow: 0 18px 45px rgb(0 0 0 / 0.35);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
+  --color-accent-contrast: var(--accent-contrast);
   --color-muted: var(--muted);
   --color-border: var(--border);
   --color-secondary: var(--secondary);
+  --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
+  --color-brand: var(--brand);
+  --color-skin-base: var(--foreground);
+  --color-skin-card: var(--surface);
+  --color-skin-fill: var(--surface-strong);
+  --color-skin-line: var(--border);
+  --color-skin-accent: var(--accent);
+  --color-skin-inverted: var(--accent-contrast);
+  --font-sans: "IBM Plex Sans", sans-serif;
+  --font-serif: "Newsreader", serif;
+  --font-mono: "JetBrains Mono", monospace;
 
   --animate-fade-in: fade-in 0.5s ease-out;
   --animate-slide-up: slide-up 0.5s ease-out forwards;
@@ -63,8 +86,20 @@ html[data-theme="dark"] {
     @apply overflow-y-scroll scroll-smooth;
   }
   body {
-    @apply flex min-h-svh flex-col bg-background font-sans text-foreground transition-colors duration-300 selection:bg-accent/75 selection:text-background;
+    @apply flex min-h-svh flex-col bg-background font-sans text-foreground antialiased transition-colors duration-300 selection:bg-accent selection:text-accent-contrast;
     font-family: "IBM Plex Sans", sans-serif;
+    background-image:
+      linear-gradient(
+        90deg,
+        color-mix(in srgb, var(--border) 36%, transparent) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        color-mix(in srgb, var(--border) 28%, transparent) 1px,
+        transparent 1px
+      );
+    background-size: 36px 36px;
+    background-attachment: fixed;
   }
   h1,
   h2,
@@ -72,9 +107,9 @@ html[data-theme="dark"] {
   h4,
   h5,
   h6 {
-    font-family: "Chakra Petch", sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.02em;
+    font-family: "Newsreader", serif;
+    font-weight: 700;
+    letter-spacing: 0;
   }
   code,
   pre {
@@ -99,7 +134,12 @@ html[data-theme="dark"] {
 }
 
 .active-nav {
-  @apply font-semibold text-accent;
+  @apply bg-accent/10 font-semibold text-accent;
+}
+
+.surface-panel {
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  box-shadow: var(--shadow);
 }
 
 /* Source: https://piccalil.li/blog/a-more-modern-css-reset/ */
