@@ -7,14 +7,14 @@ featured: false
 draft: false
 tags:
   - javascript
-description: In the realm of software development, unit tests are indispensable tools that enable developers to verify the correctness of individual components within a system. Among a multitude of testing framew…
+description: A practical introduction to writing unit tests with Jest, covering setup, matchers, async tests, test organization, setup and teardown hooks, and mocking.
 ---
 
 ## Introduction
 
-In the realm of software development, unit tests are indispensable tools that enable developers to verify the correctness of individual components within a system. Among a multitude of testing frameworks, Jest has garnered much popularity for its simplicity and comprehensive functionality. Developed by Facebook, Jest is a delightful JavaScript testing framework focusing on simplicity.
+Unit tests let you verify the correctness of individual components within a system, and among the many JavaScript testing frameworks, Jest has become one of the most popular thanks to its simplicity and the amount of functionality it ships with. It was developed at Facebook and describes itself as a delightful JavaScript testing framework, which is mostly accurate.
 
-In this blog post, we'll delve into how to write robust unit tests using Jest.
+In this blog post, we'll go through how to write unit tests using Jest.
 
 ## 1. Setting up Jest
 
@@ -129,4 +129,4 @@ test("calls request with the right args and returns data", () => {
 });
 ```
 
-Jest's flexible nature and out-of-the-box capabilities make it a preferred choice for JavaScript developers. With Jest, the daunting task of writing tests becomes much more manageable and efficient, enabling you to deliver reliable, high-quality code. As with any tool, mastering Jest requires practice and hands-on experience, so don't be discouraged if it feels overwhelming initially. Happy testing!
+Jest's flexibility and out-of-the-box capabilities make it a solid choice for JavaScript projects. Writing tests becomes much more manageable once you know the basics above, and the rest comes with practice. Don't be discouraged if mocking feels confusing at first; it confuses everyone at first. Happy testing!

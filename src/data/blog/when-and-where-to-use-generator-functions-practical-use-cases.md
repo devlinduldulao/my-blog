@@ -8,12 +8,12 @@ draft: false
 tags:
   - javascript
   - typescript
-description: Now that we've explored the mechanics of generator functions, it's essential to understand where they can be utilized best. Despite their power, they are not a one-size-fits-all solution. But, for ce…
+description: Three practical use cases for JavaScript generator functions - processing large data sets without holding them in memory, managing asynchronous flow, and building infinite sequences.
 ---
 
 ## Introduction
 
-Now that we've explored the mechanics of generator functions, it's essential to understand where they can be utilized best. Despite their power, they are not a one-size-fits-all solution. But, for certain scenarios, they are indeed a game-changer. Let's dive into some practical use cases of generator functions.
+Now that we've covered the mechanics of generator functions, the next question is where to actually use them. They're not a fit for every problem, but in a few specific scenarios they beat the alternatives clearly. Here are the ones I run into most.
 
 ## Handling large data sets
 
@@ -84,4 +84,4 @@ console.log(enemies.next().value); // { id: 1, type: 'enemy', hp: 100 }
 
 In this example, enemyGenerator it will create a new enemy each time it's called and will do so indefinitely.
 
-In conclusion, generator functions are a powerful addition to JavaScript. While they may not be the right tool for every job, they truly shine in certain scenarios like managing large data sets, asynchronous flow, or creating infinite data structures.
+Generator functions aren't the right tool for every job, but for large data sets, sequential asynchronous flow, and infinite data structures, they're often the cleanest option available.

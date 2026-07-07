@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - security
-description: In December 2020, the world witnessed one of the most sophisticated cyberattacks in history - the SolarWinds hacking. This blog post explores the events that transpired and how such an incident could…
+description: How the SolarWinds supply chain attack of December 2020 worked, why it went undetected for months, and five lessons organizations can apply to prevent similar breaches.
 ---
 
 ## Introduction
@@ -26,12 +26,12 @@ So, how could the SolarWinds hack have been prevented? Here are some key lessons
 
 2.  Least-privilege access controls: Implementing least-privilege access controls ensures that users have the minimum level of access necessary to perform their duties. This limits the potential damage an attacker can cause if they manage to infiltrate a system.
 
-3.  Robust monitoring and detection systems: Organizations should invest in advanced monitoring and detection solutions that can identify anomalous behavior and malicious activities. Continuous monitoring and real-time alerts can help security teams respond promptly to potential threats.
+3.  Strong monitoring and detection systems: Organizations should invest in advanced monitoring and detection solutions that can identify anomalous behavior and malicious activities. Continuous monitoring and real-time alerts can help security teams respond promptly to potential threats.
 
 4.  Employee training and awareness: Educating employees about cybersecurity best practices, such as recognizing phishing attempts and adhering to strong password policies, can significantly reduce the likelihood of a breach. Regular security training can help foster a culture of vigilance within an organization.
 
 5.  Incident response and recovery plans: A well-defined incident response plan can help organizations react quickly and effectively to security breaches. This should include clear communication protocols, designated response teams, and pre-determined recovery strategies.
 
-In conclusion, the SolarWinds hack was a wake-up call for organizations worldwide, highlighting the need for a comprehensive approach to cybersecurity. By implementing rigorous supply chain security measures, adopting least-privilege access controls, investing in robust monitoring and detection systems, promoting employee training, and developing incident response plans, organizations can better protect themselves from the ever-evolving threat landscape.
+The SolarWinds hack forced organizations worldwide to rethink how much trust they place in their software vendors. Supply chain security reviews, least-privilege access, good monitoring, employee training, and a rehearsed incident response plan won't make you unhackable, but together they raise the cost of an attack considerably.
 
-As technology continues to advance and cyberattacks become more sophisticated, it is crucial that businesses and government agencies remain proactive in their security measures. The SolarWinds hack serves as a stark reminder of the potential consequences of failing to do so. By learning from this incident and taking the necessary steps to safeguard their systems, organizations can defend themselves against future attacks and help create a more secure digital environment for all.
+Attacks keep getting more sophisticated, and businesses and government agencies have to keep pace. The organizations that studied SolarWinds and tightened their vendor controls afterward are in a much better position than those that treated it as someone else's problem.

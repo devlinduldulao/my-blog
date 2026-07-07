@@ -7,12 +7,12 @@ featured: false
 draft: false
 tags:
   - security
-description: The Bangladesh Bank heist in February 2016 was one of the most infamous cybercrimes in history. Criminals attempted to steal nearly $1 billion from the central bank of Bangladesh, successfully making…
+description: In February 2016, criminals attempted to steal nearly $1 billion from the central bank of Bangladesh and made off with $81 million. Here's how the heist worked and what it teaches about cybersecurity.
 ---
 
 ## Introduction
 
-The Bangladesh Bank heist in February 2016 was one of the most infamous cybercrimes in history. Criminals attempted to steal nearly $1 billion from the central bank of Bangladesh, successfully making off with $81 million. While this event sent shockwaves across the global financial system, it also serves as a stark reminder of the importance of strong cybersecurity measures. In this blog post, we'll explore the details of the heist and discuss ways to prevent such incidents in the future.
+The Bangladesh Bank heist in February 2016 was one of the most infamous cybercrimes in history. Criminals attempted to steal nearly $1 billion from the central bank of Bangladesh, successfully making off with $81 million. The event rattled the global financial system and exposed how weak the security around interbank transfers could be. In this blog post, we'll go through the details of the heist and discuss ways to prevent such incidents in the future.
 
 ## The heist:
 
@@ -20,7 +20,7 @@ The Bangladesh Bank heist was orchestrated by a group of hackers who infiltrated
 
 ## Lessons learned:
 
-The Bangladesh Bank heist highlighted the vulnerabilities of the global financial system and emphasized the need for robust cybersecurity measures. To prevent similar incidents, organizations should consider the following strategies:
+The Bangladesh Bank heist exposed vulnerabilities across the global financial system. To prevent similar incidents, organizations should consider the following strategies:
 
 1. Strengthen internal cybersecurity protocols: Organizations should regularly review and update their cybersecurity policies and procedures. This includes implementing strong access controls, encrypting sensitive data, and monitoring network traffic for any unusual activities. Employee training on cybersecurity best practices and the importance of strong passwords should also be prioritized.
 
@@ -34,6 +34,6 @@ The Bangladesh Bank heist highlighted the vulnerabilities of the global financia
 
 ## Conclusion
 
-The Bangladesh Bank heist serves as a cautionary tale for organizations worldwide. By implementing strong cybersecurity measures, regularly assessing vulnerabilities, and fostering collaboration among various stakeholders, organizations can minimize the risk of falling victim to similar attacks. The importance of robust cybersecurity practices cannot be overstated in today's interconnected world. As cybercriminals grow more sophisticated, organizations must remain vigilant and proactive in their efforts to protect their networks, systems, and sensitive data.
+The Bangladesh Bank heist shows what a determined group can do with network access, patience, and a bit of luck. Strong internal controls, regular vulnerability testing, MFA, patched systems, and good relationships with peer institutions and law enforcement all make this kind of attack harder to pull off.
 
-Remember, cybersecurity is not a one-time event but an ongoing process that requires constant evaluation, adaptation, and investment. By learning from incidents like the Bangladesh Bank heist and implementing best practices, organizations can work together to create a more secure global financial system and safeguard their assets from the ever-evolving threats of cybercrime.
+Cybersecurity is ongoing work, not a one-time project. The banks that learned from this heist and invested in their defenses are better prepared for the next attempt, and there will be a next attempt.

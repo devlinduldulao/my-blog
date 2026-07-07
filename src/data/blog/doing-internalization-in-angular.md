@@ -7,16 +7,16 @@ featured: false
 draft: false
 tags:
   - angular
-description: Creating applications that can effortlessly transcend language barriers has become imperative in our increasingly globalised world. Internalization, also known as internationalization or i18n, is the…
+description: A step-by-step guide to internationalization (i18n) in Angular - installing @angular/localize, marking content for translation, extracting messages, and building per-locale bundles.
 ---
 
 ## Introduction
 
-Creating applications that can effortlessly transcend language barriers has become imperative in our increasingly globalised world. Internalization, also known as internationalization or i18n, is the process of designing software so that it can be easily adapted to different languages and regions without engineering changes. In this post, we will discuss how to perform internalization in Angular.
+If your application needs to serve users in more than one language, you need internationalization, or i18n: the practice of designing software so it can be adapted to different languages and regions without engineering changes. In this post, we will go through how to do it in Angular.
 
-Angular, a popular web application framework developed by Google, offers excellent support for internalization. It provides tools and techniques for your applications to cater to various languages and locales.
+Angular ships with good i18n support out of the box, with tools for marking, extracting, and serving translations for different locales.
 
-Let's dive into the steps of how you can internalize your Angular application:
+Here are the steps to internationalize your Angular application:
 
 ## Step 1: Install Angular's i18n Library
 
@@ -104,4 +104,4 @@ ng build --configuration=production,es
 
 With your application built for the desired locale, you can now serve it to your users. Remember that you have separate builds for different languages, so you must serve the right one based on the user's locale.
 
-And that's it! By following these steps, you can successfully internationalize your Angular application. Remember, internalization helps you reach a broader audience and improves user experience by providing content that resonates with the user's language and cultural context. Happy coding!
+And that's it! By following these steps, you can successfully internationalize your Angular application. It's a modest amount of setup work for a real payoff: users get content in their own language, and you get a much broader potential audience. Happy coding!

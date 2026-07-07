@@ -8,12 +8,12 @@ draft: false
 tags:
   - javascript
   - typescript
-description: JavaScript has evolved significantly over the years, enabling more efficient, streamlined coding through ES6+ features. One such feature that has dramatically transformed the way we handle asynchrono…
+description: An introduction to generator functions in JavaScript. How the function* syntax and yield keyword work, and how generators can be used for asynchronous operations.
 ---
 
 ## Introduction
 
-JavaScript has evolved significantly over the years, enabling more efficient, streamlined coding through ES6+ features. One such feature that has dramatically transformed the way we handle asynchronous data is the generator function.
+ES6 brought a lot of useful features to JavaScript, and generator functions are one of the more underused ones. They change how a function executes in a way nothing else in the language does, and they're worth knowing well.
 
 ## What are generator functions?
 
@@ -66,4 +66,4 @@ In this example, we first call generator.next(), which starts the generator func
 
 ## Conclusion
 
-JavaScript's generator functions offer a powerful, efficient way to handle asynchronous operations and large data sets. They provide the ability to pause and resume execution of function bodies, making code more readable and maintainable. Like any tool, they shine the brightest when used in the right context. So, the next time you find yourself dealing with complex asynchronous code or large data streams, give generator functions a shot!
+Generator functions give you a way to pause and resume execution of a function body, which is handy for asynchronous operations and large data sets alike. Like any tool, they shine when used in the right context. Next time you find yourself dealing with complex asynchronous code or large data streams, give generator functions a shot!

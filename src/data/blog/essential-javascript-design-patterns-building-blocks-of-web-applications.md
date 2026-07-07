@@ -8,12 +8,12 @@ draft: false
 tags:
   - javascript
   - typescript
-description: JavaScript, the lingua franca of the web, has long shed its reputation as a rudimentary scripting language. Today, it's ubiquitous across web, mobile, and server-side development, powering some of th…
+description: Five JavaScript design patterns worth knowing - Module, Revealing Module, Singleton, Observer, and Factory - with working code examples for each.
 ---
 
 ## Introduction
 
-JavaScript, the lingua franca of the web, has long shed its reputation as a rudimentary scripting language. Today, it's ubiquitous across web, mobile, and server-side development, powering some of the most complex applications. One of the critical aspects of JavaScript development is the implementation of design patterns, which are reusable solutions to common software design problems. Let's explore some of these essential design patterns that can help you craft efficient and maintainable JavaScript applications.
+JavaScript long ago shed its reputation as a rudimentary scripting language. Today it runs web, mobile, and server-side applications, and with that scale comes the need for structure. Design patterns are reusable solutions to common software design problems, and a handful of them come up again and again in JavaScript codebases. Let's go through five of them with code examples.
 
 ### 1. Module pattern
 
@@ -154,4 +154,4 @@ const car = carFactory.createCar({ doors: 2, color: "red" });
 // Creates a Car with 2 doors and red color.
 ```
 
-These are just a few examples of the JavaScript design patterns you'll encounter. Others include the Prototype, Decorator, and Command patterns, among others. These patterns don't represent ready-to-use code but serve as templates that guide you towards cleaner and more efficient JavaScript code. They may seem daunting at first, but they can become second nature and prove indispensable in your coding toolkit with practice.
+These are just a few of the JavaScript design patterns you'll encounter; the Prototype, Decorator, and Command patterns are also worth reading up on. Patterns aren't ready-to-use code, they're templates that point you toward cleaner solutions. They may seem abstract at first, but after you've used them a few times in real code, reaching for the right one becomes second nature.

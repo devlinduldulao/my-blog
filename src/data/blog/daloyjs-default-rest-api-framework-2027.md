@@ -18,25 +18,21 @@ I have been building web apps and backend services for around ten years now. I a
 
 That is why [DaloyJS](https://daloyjs.dev) feels important to me.
 
-Not because we needed yet another JavaScript framework with a nice logo and a landing page that says "developer experience" seven times. We already have enough of those. DaloyJS matters because backend development has changed. In 2027, the default developer workflow is no longer one senior engineer carefully reading RFCs, security checklists, CI hardening guides, package manager docs, and OWASP pages before creating a service. The default workflow is now: open an editor, ask an AI agent to scaffold something, accept most of it, deploy to a platform, and hope the internet behaves like a polite guest.
+We already have enough JavaScript frameworks with a nice logo and a landing page that says "developer experience" seven times, so I understand the skepticism. DaloyJS matters for a different reason: backend development has changed. In 2027, the default developer workflow is no longer one senior engineer carefully reading RFCs, security checklists, CI hardening guides, package manager docs, and OWASP pages before creating a service. The default workflow is now: open an editor, ask an AI agent to scaffold something, accept most of it, deploy to a platform, and hope the internet behaves like a polite guest. The internet has never once behaved like a polite guest.
 
-The internet is not a polite guest.
-
-Attackers are using the same LLM speed boost as developers. They can search package ecosystems faster, generate exploit variants faster, inspect CI configurations faster, look for exposed secrets faster, and abuse copy-paste mistakes faster. They are not only attacking your route handler. They are attacking your packages, your lockfile, your GitHub Actions YAML, your install scripts, your Docker image, your runtime, your reverse proxy, your forgotten docs route, your webhook endpoint, and that one `curl | bash` habit somebody still refuses to confess.
+Attackers are using the same LLM speed boost as developers. They can search package ecosystems, generate exploit variants, inspect CI configurations, hunt for exposed secrets, and abuse copy-paste mistakes faster than ever. And they are not only attacking your route handler. They are attacking your packages, your lockfile, your GitHub Actions YAML, your install scripts, your Docker image, your runtime, your reverse proxy, your forgotten docs route, your webhook endpoint, and that one `curl | bash` habit somebody still refuses to confess.
 
 This is why I think DaloyJS is one of the most underrated backend frameworks today, and why I would seriously consider making it the default REST API service framework for TypeScript teams in 2027, 2028, and probably the years after that.
 
 ## The Old Backend Model Is Not Enough
 
-Most frameworks still assume the developer will bring the security posture later. Install this plugin. Configure this middleware. Add this CORS rule. Remember CSRF if cookies are involved. Add rate limits. Do not trust proxy headers unless your proxy rewrites them. Pin your GitHub Actions. Disable lifecycle scripts. Generate an SBOM. Add CodeQL. Add secret scanning. Check lockfile sources. Do not use random packages hallucinated by an AI assistant. Also please read these 19 blog posts before lunch.
-
-Come on.
+Most frameworks still assume the developer will bring the security posture later. Install this plugin. Configure this middleware. Add this CORS rule. Remember CSRF if cookies are involved. Add rate limits. Do not trust proxy headers unless your proxy rewrites them. Pin your GitHub Actions. Disable lifecycle scripts. Generate an SBOM. Add CodeQL. Add secret scanning. Check lockfile sources. Avoid random packages hallucinated by an AI assistant. Also please read these 19 blog posts before lunch.
 
 I know many excellent developers, and even they do not remember every checklist every time. Now add the reality that millions of people are vibe-coding backends without deep security background. Some are frontend developers moving fast. Some are founders. Some are students. Some are non-programmers who can now produce a working API with enough prompts and caffeine. I am not judging. I have also shipped code with the confidence of a man who forgot to read the fine print.
 
-The problem is that modern backend security cannot depend on everyone being careful. That is not a strategy. That is a group prayer.
+The problem is that modern backend security cannot depend on everyone being careful. Hoping several million busy people all stay careful forever is closer to a group prayer than a strategy.
 
-DaloyJS starts from a better principle: trust no one. Do not trust the client. Do not trust random npm packages. Do not trust proxy headers by default. Do not trust AI-generated code to remember security controls. Do not even trust the developer to wire the obvious middleware. Give them a framework where the safe path is already close to the happy path.
+DaloyJS starts from a better principle: trust no one. That includes the client, random npm packages, proxy headers, AI-generated code, and even the developer's memory of which middleware to wire up. Give people a framework where the safe path is already close to the happy path.
 
 ## Security Is Not A Plugin Here
 
@@ -44,11 +40,11 @@ DaloyJS is a runtime-portable, contract-first TypeScript REST API framework. It 
 
 But the real story is not only portability. It is the security baseline.
 
-The core enforces body-size limits, request timeouts, prototype-pollution-safe JSON parsing, path traversal rejection, duplicate singleton header rejection for request-smuggling defense, unsupported content-type rejection, proper `405 Method Not Allowed`, response header sanitization, and production redaction for 5xx problem responses. These are not decorations. These are the things people forget until a scanner, an attacker, or a customer finds them.
+The core enforces body-size limits, request timeouts, prototype-pollution-safe JSON parsing, path traversal rejection, duplicate singleton header rejection for request-smuggling defense, unsupported content-type rejection, proper `405 Method Not Allowed`, response header sanitization, and production redaction for 5xx problem responses. Every item on that list is something people forget until a scanner, an attacker, or a customer finds it.
 
 Then the first-party middleware stack adds the pieces real services need: `secureHeaders()`, `cors()`, `csrf()`, `rateLimit()`, `requestId()`, `bearerAuth()`, `basicAuth()`, signed-cookie sessions, JWT and JWKS verification, `fetchGuard()` for SSRF defense, `waf()` for opt-in application-layer inspection, `botGuard()`, `autoBan()`, `ipRestriction()`, `geoBlock()`, `concurrencyLimit()`, webhook signatures, HTTP Message Signatures, mTLS client certificate auth, idempotency keys, response caching, metrics, tracing, and graceful shutdown.
 
-That is not a tiny checklist. That is the checklist trying to save you from yourself.
+That is the entire checklist trying to save you from yourself.
 
 And yes, you still need to design authorization, data access, tenancy, and infrastructure properly. DaloyJS does not magically know your business rules. If your app lets Bob download Alice's invoice because you forgot the tenant filter, no framework can clap its hands and fix your product logic. But DaloyJS shrinks the number of security chores you must remember before you even start writing business logic.
 
@@ -58,7 +54,7 @@ The most interesting thing in DaloyJS is almost rude in its simplicity: `@daloyj
 
 That matters more in 2026 than it did five years ago. The npm ecosystem is powerful, but it is also a giant buffet where some dishes may phone home during install. Supply-chain attacks are no longer rare academic stories. The pattern is already clear: a maintainer gets phished, a popular package version is poisoned, a CI cache is abused, a token is extracted, a dependency name is typo-squatted or slop-squatted, and thousands of downstream projects install the problem before anyone has finished their coffee.
 
-LLMs make this worse in two directions. Developers may ask agents to install packages that do not exist, and attackers can register those hallucinated names. Attackers can also use LLMs to inspect open-source repos for weak CI permissions, unpinned actions, install scripts, secrets, and publish workflows. We automated productivity. They automated reconnaissance. Surprise, the other side also has laptops.
+LLMs make this worse in two directions. Developers may ask agents to install packages that do not exist, and attackers can register those hallucinated names. Attackers can also use LLMs to inspect open-source repos for weak CI permissions, unpinned actions, install scripts, secrets, and publish workflows. While we were automating productivity, they were automating reconnaissance. Surprise, the other side also has laptops.
 
 DaloyJS answers with boring, practical controls. The repo and scaffolder prefer pnpm. The generated `.npmrc` can include `ignore-scripts=true`, `minimum-release-age=1440`, `prefer-frozen-lockfile=true`, `verify-store-integrity=true`, and `strict-peer-dependencies=true`. That means transitive lifecycle scripts do not just run because some package asked nicely. Freshly published packages wait 24 hours before install, which gives the ecosystem time to detect obvious malware waves. The package store is verified. CI uses frozen lockfiles.
 
@@ -138,19 +134,19 @@ DaloyJS deserves more noise because it is trying to protect the average backend 
 
 ## The Future Needs Guardrails By Default
 
-In 2027 and beyond, more software will be generated by AI agents. That is not a prediction anymore. That is Tuesday. The question is whether those agents will generate apps inside a strong framework with guardrails, or inside a blank project where security depends on prompt quality.
+In 2027 and beyond, more software will be generated by AI agents. That stopped being a prediction a while ago; now it is just Tuesday. The question is whether those agents will generate apps inside a strong framework with guardrails, or inside a blank project where security depends on prompt quality.
 
 I do not trust prompt quality. I barely trust my own grocery list.
 
 DaloyJS is interesting because it assumes both developers and agents need help. The scaffolder can include `AGENTS.md`, project conventions, hardened pnpm config, CI security files, and runtime defaults. The repo itself has audits for weak randomness, unsafe buffers, leaked credentials, remote execution, lifecycle scripts, registry exfiltration, invisible Unicode, vulnerable sandboxes, secret comparisons, runtime parity, governance, SBOMs, and more. That sounds excessive until you remember attackers only need one lazy mistake.
 
-This is the part I want more frameworks to copy. Security should not be a premium personality trait. It should be infrastructure. It should be default. It should be boring enough that even a tired developer, a founder using an AI agent, or me after too much coffee can start from a safer place.
+This is the part I want more frameworks to copy. Security should not be a premium personality trait. It should be infrastructure, boring enough that even a tired developer, a founder using an AI agent, or me after too much coffee can start from a safer place.
 
-DaloyJS is underrated because it is not only selling speed. It is selling restraint. It says fewer moving parts. Fewer dependencies. Fewer stale specs. Fewer unchecked install hooks. Fewer places where an agent can improvise something dangerous. More contracts. More validation. More explicit decisions.
+DaloyJS is underrated because it is selling restraint rather than speed: fewer moving parts, fewer dependencies, fewer stale specs, fewer unchecked install hooks, fewer places where an agent can improvise something dangerous, and in exchange more contracts, more validation, and more explicit decisions.
 
 That is exactly the kind of backend framework I want today.
 
-If you are building a REST API in TypeScript, especially one that will be maintained by humans and AI agents together, try DaloyJS before reaching for the usual stack. Not because it is trendy. It is not trendy enough yet. Try it because the next era of backend development belongs to frameworks that assume the world is hostile, the supply chain is fragile, and developers are moving too fast.
+If you are building a REST API in TypeScript, especially one that will be maintained by humans and AI agents together, try DaloyJS before reaching for the usual stack. It is not even trendy yet, which might be the best reason. The next era of backend development belongs to frameworks that assume the world is hostile, the supply chain is fragile, and developers are moving too fast.
 
 That sounds pessimistic, I know. But good backend engineering has always been a little pessimistic. We validate input because clients lie. We use timeouts because networks hang. We pin actions because tags move. We block install scripts because packages can betray us.
 

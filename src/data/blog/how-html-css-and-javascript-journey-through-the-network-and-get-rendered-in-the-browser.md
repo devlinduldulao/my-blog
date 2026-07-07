@@ -8,12 +8,12 @@ draft: false
 tags:
   - javascript
   - web-development
-description: The intricate dance of HTML, CSS, and JavaScript is at the heart of every website and web application. These technologies form the foundation of web development. However, how these comp…
+description: What actually happens between typing a URL and seeing a page. How HTML, CSS, and JavaScript travel over the network and get parsed, laid out, and painted by the browser.
 ---
 
 ## Introduction
 
-The intricate dance of HTML, CSS, and JavaScript is at the heart of every website and web application. These technologies form the foundation of web development. However, how these components travel across the network to your device and how they transform into an interactive web page is a complex yet fascinating process. In this blog post, we'll unravel the process from network transmission to the final rendering in the browser.
+Every website you visit is built on HTML, CSS, and JavaScript. Most of us write these files daily without thinking much about what happens between saving them on a server and seeing a rendered page on screen. In this blog post, we'll walk through that process, from network transmission to the final rendering in the browser.
 
 ## Transmission Across the Network
 
@@ -46,6 +46,4 @@ After the rendering process, users can interact with the page. User interactions
 
 # Conclusion
 
-The process of how HTML, CSS, and JavaScript traverse the network and get rendered in the browser is a testament to the intricacies and power of web technologies. The browser handles a remarkable amount of work, parsing files, executing scripts, rendering visual elements, and managing user interactions. By understanding this process, we can create more efficient, faster-loading, and smoother-running websites and applications.
-
-In our digital age, these technologies continue to evolve, driving the future of the web with ever-increasing sophistication and user experience. It's a fascinating journey, not just for the data traveling from servers to our screens, but also for us, as we delve deeper into the dynamic realm of web development.
+The browser does a remarkable amount of work to turn three text files into an interactive page: parsing, script execution, layout, painting, and compositing. Knowing where each step happens helps you understand why a render-blocking script slows down first paint, or why changing an element's size is more expensive than changing its color. That knowledge translates directly into faster-loading, smoother-running websites.
