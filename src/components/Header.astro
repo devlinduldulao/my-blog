@@ -38,11 +38,11 @@ const isActive = (path: string) => {
   >
     <div
       id="top-nav-wrap"
-      class="relative flex w-full items-center justify-between p-4 sm:py-6"
+      class="relative flex w-full items-center justify-between px-4 py-3 sm:py-5"
     >
       <a
         href="/"
-        class="font-serif text-2xl font-extrabold tracking-normal transition-colors duration-300 hover:text-accent"
+        class="font-serif text-[1.45rem] font-extrabold tracking-tight transition-colors duration-300 hover:text-accent sm:text-2xl"
       >
         {SITE.title}
       </a>
@@ -63,7 +63,7 @@ const isActive = (path: string) => {
         <ul
           id="menu-items"
           class:list={[
-            "mt-4 grid w-full grid-cols-2 gap-4 rounded-lg bg-secondary/50 p-4 sm:bg-transparent sm:p-0",
+            "mt-3 grid w-full grid-cols-2 gap-2 rounded-lg border border-border/70 bg-secondary/80 p-2 shadow-sm sm:mt-0 sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none",
             "[&>li>a]:block [&>li>a]:rounded-md [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:text-center [&>li>a]:font-semibold [&>li>a]:transition-colors [&>li>a]:hover:bg-accent/10 [&>li>a]:hover:text-accent sm:[&>li>a]:px-3 sm:[&>li>a]:py-1.5",
             "hidden",
             "sm:mt-0 sm:flex sm:w-auto sm:items-center sm:gap-x-2 sm:gap-y-0",
@@ -213,12 +213,21 @@ const isActive = (path: string) => {
 
 <script>
   function toggleNav() {
-    const menuBtn = document.querySelector("#menu-btn");
-    const menuItems = document.querySelector("#menu-items");
-    const menuIcon = document.querySelector("#menu-icon");
-    const closeIcon = document.querySelector("#close-icon");
+    const menuBtn = document.querySelector<HTMLButtonElement>("#menu-btn");
+    const menuItems = document.querySelector<HTMLUListElement>("#menu-items");
+    const menuIcon = document.querySelector<HTMLElement>("#menu-icon");
+    const closeIcon = document.querySelector<HTMLElement>("#close-icon");
 
-    if (!menuBtn || !menuItems || !menuIcon || !closeIcon) return;
+    if (
+      !menuBtn ||
+      !menuItems ||
+      !menuIcon ||
+      !closeIcon ||
+      menuBtn.dataset.bound
+    )
+      return;
+
+    menuBtn.dataset.bound = "true";
 
     menuBtn.addEventListener("click", () => {
       const openMenu = menuBtn.getAttribute("aria-expanded") === "true";
@@ -229,6 +238,17 @@ const isActive = (path: string) => {
       menuItems.classList.toggle("hidden");
       menuIcon.classList.toggle("hidden");
       closeIcon.classList.toggle("hidden");
+    });
+
+    menuItems.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        if (!window.matchMedia("(max-width: 639px)").matches) return;
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.setAttribute("aria-label", "Open Menu");
+        menuItems.classList.add("hidden");
+        menuIcon.classList.remove("hidden");
+        closeIcon.classList.add("hidden");
+      });
     });
   }
 

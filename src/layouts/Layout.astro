@@ -30,21 +30,29 @@ const {
 
 const socialImageURL = new URL(ogImage, Astro.url);
 
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  headline: `${title}`,
-  image: `${socialImageURL}`,
-  datePublished: `${pubDatetime?.toISOString()}`,
-  ...(modDatetime && { dateModified: modDatetime.toISOString() }),
-  author: [
-    {
-      "@type": "Person",
-      name: `${author}`,
-      ...(profile && { url: profile }),
-    },
-  ],
-};
+const structuredData = pubDatetime
+  ? {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: `${title}`,
+      image: `${socialImageURL}`,
+      datePublished: pubDatetime.toISOString(),
+      ...(modDatetime && { dateModified: modDatetime.toISOString() }),
+      author: [
+        {
+          "@type": "Person",
+          name: `${author}`,
+          ...(profile && { url: profile }),
+        },
+      ],
+    }
+  : {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: `${title}`,
+      description: `${description}`,
+      url: `${canonicalURL}`,
+    };
 ---
 
 <!doctype html>
@@ -55,8 +63,8 @@ const structuredData = {
 >
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
@@ -78,6 +86,7 @@ const structuredData = {
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content={title} />
+    <meta property="og:type" content={pubDatetime ? "article" : "website"} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={socialImageURL} />
@@ -101,11 +110,11 @@ const structuredData = {
     }
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonicalURL} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={socialImageURL} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageURL} />
 
     <!-- Google JSON-LD Structured data -->
     <script
