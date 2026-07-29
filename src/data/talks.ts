@@ -1,10 +1,24 @@
 const talks: Talk[] = [
   {
+    event: ".NET Developer Conference 26",
+    date: "November 2026",
+    location: "Cologne, Germany",
+    title: "AI Agent Terms",
+    url: "https://developer-world.de",
+  },
+  {
     event: "JS Conf Mexico 2026",
     date: "October 2026",
     location: "Guadalejara, Mexico",
     title: "Microfrontends with Module Federation",
     url: "https://jsconfmx.org",
+  },
+  {
+    event: "Next App DevCon",
+    date: "October 2026",
+    location: "Berlin, Germany",
+    title: "AI wrote your app, who wrote the security?",
+    url: "https://nextappcon.com",
   },
   {
     event: "React Alicante 2026",
