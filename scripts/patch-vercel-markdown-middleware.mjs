@@ -20,7 +20,9 @@ const vcConfigFile = path.join(middlewareDir, ".vc-config.json");
 const entry = path.join(root, "src/vercel-edge-markdown.ts");
 
 if (!existsSync(configPath)) {
-  process.exit(0);
+  throw new Error(
+    `Missing ${configPath}. Run this script after \`astro build\` with the Vercel adapter.`
+  );
 }
 
 mkdirSync(middlewareDir, { recursive: true });
@@ -54,6 +56,11 @@ await esbuild.build({
             /const rawPosts = import\.meta\.glob[\s\S]*?eager:\s*true,\s*}\);/,
             `const rawPosts = {${rawPostEntries}};`
           );
+          if (contents === source) {
+            throw new Error(
+              "Failed to inline blog markdown: glob snippet not found in agentContent.ts"
+            );
+          }
           return { contents, loader: "ts" };
         });
       },
@@ -75,18 +82,24 @@ writeFileSync(
 
 const config = JSON.parse(readFileSync(configPath, "utf8"));
 const routes = Array.isArray(config.routes) ? config.routes : [];
-const already = routes.some(
+
+// The Edge handler is middleware only. Do not also dest application
+// routes at _middleware — Vercel rejects that mixed function type.
+const filtered = routes.filter(
+  route => !(route && route.dest === "_middleware")
+);
+
+const already = filtered.some(
   route =>
-    route &&
-    route.middlewarePath === "_middleware" &&
-    route.continue === true
+    route && route.middlewarePath === "_middleware" && route.continue === true
 );
 if (!already) {
-  routes.unshift({
+  filtered.unshift({
     src: "/(.*)",
     middlewarePath: "_middleware",
     continue: true,
   });
-  config.routes = routes;
-  writeFileSync(configPath, `${JSON.stringify(config, null, "\t")}\n`);
 }
+
+config.routes = filtered;
+writeFileSync(configPath, `${JSON.stringify(config, null, "\t")}\n`);
