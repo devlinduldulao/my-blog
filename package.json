@@ -2,9 +2,6 @@
   "name": "devlinduldulao",
   "type": "module",
   "version": "1.0.0",
-  "engines": {
-    "node": "^20.19.1 || >=22.12.0"
-  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro check && astro build && node scripts/patch-vercel-markdown-middleware.mjs && pagefind --site dist && node scripts/copy-pagefind.mjs",
