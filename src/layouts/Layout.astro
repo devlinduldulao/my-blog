@@ -2,6 +2,10 @@
 import { ClientRouter } from "astro:transitions";
 import { PUBLIC_GOOGLE_SITE_VERIFICATION } from "astro:env/client";
 import { SITE } from "@/config";
+import {
+  organizationSchema,
+  serializeJsonLd,
+} from "@/utils/organizationSchema";
 import "@/styles/global.css";
 
 export interface Props {
@@ -83,6 +87,12 @@ const structuredData = pubDatetime
     <meta name="description" content={description} />
     <meta name="author" content={author} />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link
+      rel="alternate"
+      type="text/plain"
+      title="llms.txt"
+      href={new URL("llms.txt", Astro.site)}
+    />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content={title} />
@@ -120,7 +130,12 @@ const structuredData = pubDatetime
     <script
       type="application/ld+json"
       is:inline
-      set:html={JSON.stringify(structuredData)}
+      set:html={serializeJsonLd(structuredData)}
+    />
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={serializeJsonLd(organizationSchema)}
     />
 
     <!-- Enable RSS feed auto-discovery  -->

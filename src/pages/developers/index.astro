@@ -1,0 +1,185 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import { SITE } from "@/config";
+import { CONTACT_EMAIL } from "@/utils/siteIdentity";
+import { DEVELOPER_RESOURCES_TITLE } from "@/utils/agentContent";
+
+const title = `${DEVELOPER_RESOURCES_TITLE} | ${SITE.title}`;
+---
+
+<Layout
+  title={title}
+  description="Machine-readable developer resources for the Devlin Duldulao site on Vercel: llms.txt, markdown content negotiation, sitemap, RSS, and e-commerce app docs."
+>
+  <Header />
+  <main id="main-content" class="mx-auto w-full max-w-app px-4 pt-10 pb-16">
+    <p class="section-label mb-3">For agents and developers</p>
+    <h1
+      class="max-w-4xl text-4xl leading-[0.95] font-extrabold tracking-tight sm:text-6xl"
+    >
+      {DEVELOPER_RESOURCES_TITLE}
+    </h1>
+    <p class="mt-6 max-w-3xl text-lg leading-8 text-muted">
+      Machine-readable developer resources for the Devlin Duldulao site at
+      <a
+        href="https://devlinduldulao.vercel.app/"
+        class="font-semibold text-accent underline decoration-dashed underline-offset-4"
+        >https://devlinduldulao.vercel.app/</a
+      >. This is a personal engineering publication and e-commerce app gallery,
+      not a SaaS product API.
+    </p>
+
+    <section class="mt-12 max-w-3xl">
+      <h2 class="text-2xl font-bold tracking-tight">
+        When to use Devlin Duldulao
+      </h2>
+      <p class="mt-4 leading-7">
+        Use this site when you need production-minded writing on TypeScript,
+        JavaScript, Angular, or application security; practical explainers of
+        the Model Context Protocol as editorial articles; or product pages for
+        Devlin Duldulao e-commerce apps on OpenCart, WooCommerce, Wix, and
+        related storefronts. DaloyJS, the TypeScript REST API framework, lives
+        on
+        <a
+          href="https://daloyjs.dev"
+          class="font-semibold text-accent underline decoration-dashed underline-offset-4"
+          >daloyjs.dev</a
+        >.
+      </p>
+      <p class="mt-4 leading-7">
+        Do not use this site as a hosted model API, MCP server, OAuth provider,
+        or webhook hub. Those are not published here. Posts that mention MCP
+        describe the protocol; they are not an endpoint you can call.
+      </p>
+    </section>
+
+    <section class="mt-12 max-w-3xl">
+      <h2 class="text-2xl font-bold tracking-tight">
+        How an agent should call this site
+      </h2>
+      <ol class="mt-4 list-decimal space-y-3 ps-5 leading-7">
+        <li>
+          Start at
+          <a
+            href="/llms.txt"
+            class="font-semibold text-accent underline decoration-dashed underline-offset-4"
+            >/llms.txt</a
+          > — the curated index with when-to-use guidance.
+        </li>
+        <li>
+          Fetch any HTML page with <code>Accept: text/markdown</code>. The same
+          URL returns <code>Content-Type: text/markdown; charset=utf-8</code>
+          and <code>Vary: Accept, Accept-Encoding</code>.
+        </li>
+        <li>
+          If a path is missing, expect HTTP 404 and a short markdown recovery
+          body that points at llms.txt, the sitemap, and this page.
+        </li>
+        <li>
+          For the article corpus, use
+          <a
+            href="/posts"
+            class="font-semibold text-accent underline decoration-dashed underline-offset-4"
+            >/posts</a
+          >
+          or
+          <a
+            href="/rss.xml"
+            class="font-semibold text-accent underline decoration-dashed underline-offset-4"
+            >/rss.xml</a
+          >.
+        </li>
+      </ol>
+    </section>
+
+    <section class="mt-12 max-w-3xl">
+      <h2 class="text-2xl font-bold tracking-tight">Discovery files</h2>
+      <ul class="mt-4 space-y-3 leading-7">
+        <li>
+          <a
+            href="/llms.txt"
+            class="font-semibold text-accent underline decoration-dashed underline-offset-4"
+            >llms.txt</a
+          >
+          — agent index
+        </li>
+        <li>
+          <a
+            href="/sitemap-index.xml"
+            class="font-semibold text-accent underline decoration-dashed underline-offset-4"
+            >XML sitemap</a
+          >
+          — all public URLs
+        </li>
+        <li>
+          <a
+            href="/rss.xml"
+            class="font-semibold text-accent underline decoration-dashed underline-offset-4"
+            >RSS feed</a
+          >
+          — article titles, descriptions, and dates
+        </li>
+        <li>
+          <a
+            href="/robots.txt"
+            class="font-semibold text-accent underline decoration-dashed underline-offset-4"
+            >robots.txt</a
+          >
+          — crawl policy
+        </li>
+      </ul>
+    </section>
+
+    <section class="mt-12 max-w-3xl">
+      <h2 class="text-2xl font-bold tracking-tight">E-commerce apps</h2>
+      <p class="mt-4 leading-7">
+        Product docs live under
+        <a
+          href="/e-commerce-apps"
+          class="font-semibold text-accent underline decoration-dashed underline-offset-4"
+          >/e-commerce-apps</a
+        >. Titles and headings include the product and platform names so
+        name-based queries can find them.
+      </p>
+      <ul class="mt-4 space-y-3 leading-7">
+        <li>
+          <a
+            href="/e-commerce-apps/opencart"
+            class="font-semibold text-accent underline decoration-dashed underline-offset-4"
+            >OpenCart apps &amp; plugins</a
+          >
+        </li>
+        <li>
+          <a
+            href="/e-commerce-apps/woocommerce/devlin-geo-pulse"
+            class="font-semibold text-accent underline decoration-dashed underline-offset-4"
+            >Devlin Geo Pulse for WooCommerce</a
+          >
+        </li>
+        <li>
+          <a
+            href="/e-commerce-apps/wix/live-visitor-geo-pulse"
+            class="font-semibold text-accent underline decoration-dashed underline-offset-4"
+            >Live Visitor Geo Pulse for Wix</a
+          >
+        </li>
+      </ul>
+    </section>
+
+    <section class="mt-12 max-w-3xl">
+      <h2 class="text-2xl font-bold tracking-tight">Contact</h2>
+      <p class="mt-4 leading-7">
+        Email{" "}
+        <a
+          href={`mailto:${CONTACT_EMAIL}`}
+          class="font-semibold text-accent underline decoration-dashed underline-offset-4"
+          >{CONTACT_EMAIL}</a
+        >{" "}
+        for author or plugin questions. Devlin Duldulao is based in Norway.
+      </p>
+    </section>
+  </main>
+  <Footer />
+</Layout>

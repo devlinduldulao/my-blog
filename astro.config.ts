@@ -14,12 +14,48 @@ import { SITE } from "./src/config";
 import react from "@astrojs/react";
 import vercel from "@astrojs/vercel";
 import partytown from "@astrojs/partytown";
+import type { Plugin } from "vite";
+import type { IncomingMessage, ServerResponse } from "node:http";
+import { negotiateMarkdown } from "./src/utils/negotiateMarkdown";
+
+function acceptMarkdownDevPlugin(): Plugin {
+  return {
+    name: "accept-markdown-dev",
+    configureServer(server) {
+      server.middlewares.use(
+        (req: IncomingMessage, res: ServerResponse, next: () => void) => {
+          const header = req.headers.accept;
+          const accept = Array.isArray(header)
+            ? header.join(",")
+            : (header ?? null);
+          const pathname = (req.url ?? "/").split("?")[0] ?? "/";
+          const result = negotiateMarkdown({
+            method: req.method ?? "GET",
+            pathname,
+            accept,
+          });
+          if (!result) {
+            next();
+            return;
+          }
+          res.statusCode = result.status;
+          for (const [key, value] of Object.entries(result.headers)) {
+            res.setHeader(key, value);
+          }
+          res.end(result.body ?? "");
+        }
+      );
+    },
+  };
+}
 
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
   output: "static",
-  adapter: vercel(),
+  adapter: vercel({
+    middlewareMode: "edge",
+  }),
   integrations: [
     sitemap({
       filter: page => SITE.showArchives || !page.endsWith("/archives"),
@@ -48,7 +84,7 @@ export default defineConfig({
     },
   },
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [acceptMarkdownDevPlugin(), tailwindcss()],
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
     },
